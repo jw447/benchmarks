@@ -1,0 +1,57 @@
+=====================================================
+Fri Mar 22 04:19:48 EDT 2019
+--ps_hosts=a01n01:2220
+--worker_hosts=a01n01:2221,a01n02:2222,a01n03:2223,a01n04:2224,a01n05:2225,a01n06:2226,a01n07:2227,a01n08:2228,a01n09:2229,a01n10:22210,a01n11:22211,a01n12:22212,a01n13:22213,a01n14:22214,a01n15:22215,a01n16:22216,a01n17:22217,a01n18:22218,a02n01:22219,a02n02:22220,a02n03:22221,a02n04:22222,a02n05:22223,a02n06:22224,a02n07:22225,a02n08:22226,a02n09:22227,a02n10:22228,a02n11:22229,a02n12:22230,a02n13:22231,a02n14:22232
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 304317: <n32_dr_32w_g6_e100> in cluster <summit> Exited
+
+Job <n32_dr_32w_g6_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Thu Mar 21 01:59:26 2019
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <jw447> in cluster <summit> at Fri Mar 22 04:19:36 2019
+                            <42*a01n01>
+                            <42*a01n02>
+                            <42*a01n03>
+                            <42*a01n04>
+                            <42*a01n05>
+                            <42*a01n06>
+                            <42*a01n07>
+                            <42*a01n08>
+                            <42*a01n09>
+                            <42*a01n10>
+                            <42*a01n11>
+                            <42*a01n12>
+                            <42*a01n13>
+                            <42*a01n14>
+                            <42*a01n15>
+                            <42*a01n16>
+                            <42*a01n17>
+                            <42*a01n18>
+                            <42*a02n01>
+                            <42*a02n02>
+                            <42*a02n03>
+                            <42*a02n04>
+                            <42*a02n05>
+                            <42*a02n06>
+                            <42*a02n07>
+                            <42*a02n08>
+                            <42*a02n09>
+                            <42*a02n10>
+                            <42*a02n11>
+                            <42*a02n12>
+                            <42*a02n13>
+                            <42*a02n14>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Fri Mar 22 04:19:36 2019
+Terminated at Fri Mar 22 05:20:03 2019
+Results reported at Fri Mar 22 05:20:03 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n32_dr_32w_g6_e100.e> for stderr output of this job.
+

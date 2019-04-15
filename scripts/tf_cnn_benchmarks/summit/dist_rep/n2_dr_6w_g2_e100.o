@@ -1,0 +1,249 @@
+=====================================================
+Mon Mar 18 07:15:08 EDT 2019
+h35n12
+h35n12
+h35n13
+h35n13
+h35n12
+h35n13
+--ps_hosts=h35n12:2220
+--worker_hosts=h35n12:2221,h35n12:2222,h35n13:2223,h35n13:2224,h35n12:2225,h35n13:2226
+Params(model='resnet50', eval=False, eval_interval_secs=0, eval_during_training_every_n_steps=None, eval_during_training_every_n_epochs=None, eval_during_training_at_specified_steps=[], eval_during_training_at_specified_epochs=[], forward_only=False, freeze_when_forward_only=False, print_training_accuracy=False, batch_size=0, eval_batch_size=0, batch_group_size=1, num_batches=None, num_eval_batches=None, num_epochs=None, num_eval_epochs=None, stop_at_top_1_accuracy=None, collect_eval_results_async=False, num_warmup_batches=None, autotune_threshold=None, num_gpus=2, gpu_indices='', display_every=10, display_perf_ewma=None, data_dir=None, data_name=None, resize_method='bilinear', distortions=True, use_datasets=True, input_preprocessor='default', gpu_thread_mode='gpu_private', per_gpu_thread_count=0, hierarchical_copy=False, network_topology=<NetworkTopology.DGX1: 'dgx1'>, gradient_repacking=0, compact_gradient_transfer=True, variable_consistency='strong', datasets_repeat_cached_sample=False, local_parameter_device='CPU', device='gpu', data_format='NCHW', num_intra_threads=None, num_inter_threads=0, use_numa_affinity=False, trace_file='', use_chrome_trace_format=True, tfprof_file=None, graph_file=None, partitioned_graph_file_prefix=None, optimizer='sgd', init_learning_rate=None, piecewise_learning_rate_schedule=None, num_epochs_per_decay=0.0, learning_rate_decay_factor=0.0, num_learning_rate_warmup_epochs=0.0, minimum_learning_rate=0.0, resnet_base_lr=None, momentum=0.9, rmsprop_decay=0.9, rmsprop_momentum=0.9, rmsprop_epsilon=1.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, gradient_clip=None, weight_decay=4e-05, gpu_memory_frac_for_testing=0.0, use_unified_memory=None, use_tf_layers=True, tf_random_seed=1234, debugger=None, use_python32_barrier=False, ml_perf=False, datasets_use_prefetch=True, datasets_prefetch_buffer_size=1, datasets_num_private_threads=None, datasets_use_caching=False, datasets_parallel_interleave_cycle_length=None, datasets_sloppy_parallel_interleave=False, datasets_parallel_interleave_prefetch=None, multi_device_iterator_max_buffer_size=1, winograd_nonfused=True, batchnorm_persistent=True, sync_on_finish=False, staged_vars=False, force_gpu_compatible=False, allow_growth=None, xla=False, xla_compile=False, fuse_decode_and_crop=True, distort_color_in_yiq=True, enable_optimizations=True, rewriter_config=None, loss_type_to_report='total_loss', single_l2_loss_op=False, use_resource_vars=False, compute_lr_on_cpu=False, sparse_to_dense_grads=False, mkl=False, kmp_blocktime=0, kmp_affinity='granularity=fine,verbose,compact,1,0', kmp_settings=1, use_fp16=False, fp16_loss_scale=None, fp16_vars=False, fp16_enable_auto_loss_scale=False, fp16_inc_loss_scale_every_n=1000, variable_update='distributed_replicated', all_reduce_spec=None, agg_small_grads_max_bytes=0, agg_small_grads_max_group=10, allreduce_merge_scope=1, job_name='worker', ps_hosts='h35n12:2220', worker_hosts='h35n12:2221,h35n12:2222,h35n13:2223,h35n13:2224,h35n12:2225,h35n13:2226', controller_host=None, task_index=1, server_protocol='grpc', cross_replica_sync=True, horovod_device='', summary_verbosity=0, save_summaries_steps=0, save_model_secs=0, save_model_steps=None, max_ckpts_to_keep=5, train_dir=None, eval_dir='/tmp/tf_cnn_benchmarks/eval', backbone_model_path=None, trt_mode='', trt_max_workspace_size_bytes=4294967296, benchmark_log_dir=None, benchmark_test_id=None)
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  768 global
+             64 per device
+Num batches: 100
+Num epochs:  0.06
+Devices:     ['/job:worker/replica:0/task:1/gpu:0', '/job:worker/replica:0/task:1/gpu:1']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 37.5 +/- 0.0 (jitter = 0.0)	8.018
+10	images/sec: 37.6 +/- 0.6 (jitter = 1.7)	7.874
+20	images/sec: 37.4 +/- 0.3 (jitter = 1.3)	7.783
+30	images/sec: 37.7 +/- 0.3 (jitter = 1.6)	7.897
+40	images/sec: 37.9 +/- 0.2 (jitter = 1.8)	7.906
+50	images/sec: 37.9 +/- 0.2 (jitter = 1.9)	7.731
+60	images/sec: 37.8 +/- 0.2 (jitter = 1.5)	7.741
+70	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.642
+80	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.634
+90	images/sec: 38.0 +/- 0.2 (jitter = 1.4)	7.708
+100	images/sec: 38.1 +/- 0.2 (jitter = 1.4)	7.758
+----------------------------------------------------------------
+total images/sec: 228.30
+----------------------------------------------------------------
+Params(model='resnet50', eval=False, eval_interval_secs=0, eval_during_training_every_n_steps=None, eval_during_training_every_n_epochs=None, eval_during_training_at_specified_steps=[], eval_during_training_at_specified_epochs=[], forward_only=False, freeze_when_forward_only=False, print_training_accuracy=False, batch_size=0, eval_batch_size=0, batch_group_size=1, num_batches=None, num_eval_batches=None, num_epochs=None, num_eval_epochs=None, stop_at_top_1_accuracy=None, collect_eval_results_async=False, num_warmup_batches=None, autotune_threshold=None, num_gpus=2, gpu_indices='', display_every=10, display_perf_ewma=None, data_dir=None, data_name=None, resize_method='bilinear', distortions=True, use_datasets=True, input_preprocessor='default', gpu_thread_mode='gpu_private', per_gpu_thread_count=0, hierarchical_copy=False, network_topology=<NetworkTopology.DGX1: 'dgx1'>, gradient_repacking=0, compact_gradient_transfer=True, variable_consistency='strong', datasets_repeat_cached_sample=False, local_parameter_device='CPU', device='gpu', data_format='NCHW', num_intra_threads=None, num_inter_threads=0, use_numa_affinity=False, trace_file='', use_chrome_trace_format=True, tfprof_file=None, graph_file=None, partitioned_graph_file_prefix=None, optimizer='sgd', init_learning_rate=None, piecewise_learning_rate_schedule=None, num_epochs_per_decay=0.0, learning_rate_decay_factor=0.0, num_learning_rate_warmup_epochs=0.0, minimum_learning_rate=0.0, resnet_base_lr=None, momentum=0.9, rmsprop_decay=0.9, rmsprop_momentum=0.9, rmsprop_epsilon=1.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, gradient_clip=None, weight_decay=4e-05, gpu_memory_frac_for_testing=0.0, use_unified_memory=None, use_tf_layers=True, tf_random_seed=1234, debugger=None, use_python32_barrier=False, ml_perf=False, datasets_use_prefetch=True, datasets_prefetch_buffer_size=1, datasets_num_private_threads=None, datasets_use_caching=False, datasets_parallel_interleave_cycle_length=None, datasets_sloppy_parallel_interleave=False, datasets_parallel_interleave_prefetch=None, multi_device_iterator_max_buffer_size=1, winograd_nonfused=True, batchnorm_persistent=True, sync_on_finish=False, staged_vars=False, force_gpu_compatible=False, allow_growth=None, xla=False, xla_compile=False, fuse_decode_and_crop=True, distort_color_in_yiq=True, enable_optimizations=True, rewriter_config=None, loss_type_to_report='total_loss', single_l2_loss_op=False, use_resource_vars=False, compute_lr_on_cpu=False, sparse_to_dense_grads=False, mkl=False, kmp_blocktime=0, kmp_affinity='granularity=fine,verbose,compact,1,0', kmp_settings=1, use_fp16=False, fp16_loss_scale=None, fp16_vars=False, fp16_enable_auto_loss_scale=False, fp16_inc_loss_scale_every_n=1000, variable_update='distributed_replicated', all_reduce_spec=None, agg_small_grads_max_bytes=0, agg_small_grads_max_group=10, allreduce_merge_scope=1, job_name='worker', ps_hosts='h35n12:2220', worker_hosts='h35n12:2221,h35n12:2222,h35n13:2223,h35n13:2224,h35n12:2225,h35n13:2226', controller_host=None, task_index=0, server_protocol='grpc', cross_replica_sync=True, horovod_device='', summary_verbosity=0, save_summaries_steps=0, save_model_secs=0, save_model_steps=None, max_ckpts_to_keep=5, train_dir=None, eval_dir='/tmp/tf_cnn_benchmarks/eval', backbone_model_path=None, trt_mode='', trt_max_workspace_size_bytes=4294967296, benchmark_log_dir=None, benchmark_test_id=None)
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  768 global
+             64 per device
+Num batches: 100
+Num epochs:  0.06
+Devices:     ['/job:worker/replica:0/task:0/gpu:0', '/job:worker/replica:0/task:0/gpu:1']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 37.5 +/- 0.0 (jitter = 0.0)	8.018
+10	images/sec: 37.6 +/- 0.6 (jitter = 1.7)	7.874
+20	images/sec: 37.4 +/- 0.3 (jitter = 1.3)	7.783
+30	images/sec: 37.7 +/- 0.3 (jitter = 1.6)	7.897
+40	images/sec: 37.9 +/- 0.2 (jitter = 1.8)	7.906
+50	images/sec: 37.9 +/- 0.2 (jitter = 1.9)	7.731
+60	images/sec: 37.8 +/- 0.2 (jitter = 1.5)	7.741
+70	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.642
+80	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.634
+90	images/sec: 38.0 +/- 0.2 (jitter = 1.4)	7.708
+100	images/sec: 38.1 +/- 0.2 (jitter = 1.4)	7.758
+----------------------------------------------------------------
+total images/sec: 228.30
+----------------------------------------------------------------
+Params(model='resnet50', eval=False, eval_interval_secs=0, eval_during_training_every_n_steps=None, eval_during_training_every_n_epochs=None, eval_during_training_at_specified_steps=[], eval_during_training_at_specified_epochs=[], forward_only=False, freeze_when_forward_only=False, print_training_accuracy=False, batch_size=0, eval_batch_size=0, batch_group_size=1, num_batches=None, num_eval_batches=None, num_epochs=None, num_eval_epochs=None, stop_at_top_1_accuracy=None, collect_eval_results_async=False, num_warmup_batches=None, autotune_threshold=None, num_gpus=2, gpu_indices='', display_every=10, display_perf_ewma=None, data_dir=None, data_name=None, resize_method='bilinear', distortions=True, use_datasets=True, input_preprocessor='default', gpu_thread_mode='gpu_private', per_gpu_thread_count=0, hierarchical_copy=False, network_topology=<NetworkTopology.DGX1: 'dgx1'>, gradient_repacking=0, compact_gradient_transfer=True, variable_consistency='strong', datasets_repeat_cached_sample=False, local_parameter_device='CPU', device='gpu', data_format='NCHW', num_intra_threads=None, num_inter_threads=0, use_numa_affinity=False, trace_file='', use_chrome_trace_format=True, tfprof_file=None, graph_file=None, partitioned_graph_file_prefix=None, optimizer='sgd', init_learning_rate=None, piecewise_learning_rate_schedule=None, num_epochs_per_decay=0.0, learning_rate_decay_factor=0.0, num_learning_rate_warmup_epochs=0.0, minimum_learning_rate=0.0, resnet_base_lr=None, momentum=0.9, rmsprop_decay=0.9, rmsprop_momentum=0.9, rmsprop_epsilon=1.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, gradient_clip=None, weight_decay=4e-05, gpu_memory_frac_for_testing=0.0, use_unified_memory=None, use_tf_layers=True, tf_random_seed=1234, debugger=None, use_python32_barrier=False, ml_perf=False, datasets_use_prefetch=True, datasets_prefetch_buffer_size=1, datasets_num_private_threads=None, datasets_use_caching=False, datasets_parallel_interleave_cycle_length=None, datasets_sloppy_parallel_interleave=False, datasets_parallel_interleave_prefetch=None, multi_device_iterator_max_buffer_size=1, winograd_nonfused=True, batchnorm_persistent=True, sync_on_finish=False, staged_vars=False, force_gpu_compatible=False, allow_growth=None, xla=False, xla_compile=False, fuse_decode_and_crop=True, distort_color_in_yiq=True, enable_optimizations=True, rewriter_config=None, loss_type_to_report='total_loss', single_l2_loss_op=False, use_resource_vars=False, compute_lr_on_cpu=False, sparse_to_dense_grads=False, mkl=False, kmp_blocktime=0, kmp_affinity='granularity=fine,verbose,compact,1,0', kmp_settings=1, use_fp16=False, fp16_loss_scale=None, fp16_vars=False, fp16_enable_auto_loss_scale=False, fp16_inc_loss_scale_every_n=1000, variable_update='distributed_replicated', all_reduce_spec=None, agg_small_grads_max_bytes=0, agg_small_grads_max_group=10, allreduce_merge_scope=1, job_name='worker', ps_hosts='h35n12:2220', worker_hosts='h35n12:2221,h35n12:2222,h35n13:2223,h35n13:2224,h35n12:2225,h35n13:2226', controller_host=None, task_index=2, server_protocol='grpc', cross_replica_sync=True, horovod_device='', summary_verbosity=0, save_summaries_steps=0, save_model_secs=0, save_model_steps=None, max_ckpts_to_keep=5, train_dir=None, eval_dir='/tmp/tf_cnn_benchmarks/eval', backbone_model_path=None, trt_mode='', trt_max_workspace_size_bytes=4294967296, benchmark_log_dir=None, benchmark_test_id=None)
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  768 global
+             64 per device
+Num batches: 100
+Num epochs:  0.06
+Devices:     ['/job:worker/replica:0/task:2/gpu:0', '/job:worker/replica:0/task:2/gpu:1']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 37.5 +/- 0.0 (jitter = 0.0)	8.018
+10	images/sec: 37.6 +/- 0.6 (jitter = 1.7)	7.874
+20	images/sec: 37.4 +/- 0.3 (jitter = 1.3)	7.783
+30	images/sec: 37.7 +/- 0.3 (jitter = 1.6)	7.897
+40	images/sec: 37.9 +/- 0.2 (jitter = 1.8)	7.906
+50	images/sec: 37.9 +/- 0.2 (jitter = 1.9)	7.731
+60	images/sec: 37.8 +/- 0.2 (jitter = 1.5)	7.741
+70	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.642
+80	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.634
+90	images/sec: 38.0 +/- 0.2 (jitter = 1.4)	7.708
+100	images/sec: 38.1 +/- 0.2 (jitter = 1.4)	7.758
+----------------------------------------------------------------
+total images/sec: 228.30
+----------------------------------------------------------------
+Params(model='resnet50', eval=False, eval_interval_secs=0, eval_during_training_every_n_steps=None, eval_during_training_every_n_epochs=None, eval_during_training_at_specified_steps=[], eval_during_training_at_specified_epochs=[], forward_only=False, freeze_when_forward_only=False, print_training_accuracy=False, batch_size=0, eval_batch_size=0, batch_group_size=1, num_batches=None, num_eval_batches=None, num_epochs=None, num_eval_epochs=None, stop_at_top_1_accuracy=None, collect_eval_results_async=False, num_warmup_batches=None, autotune_threshold=None, num_gpus=2, gpu_indices='', display_every=10, display_perf_ewma=None, data_dir=None, data_name=None, resize_method='bilinear', distortions=True, use_datasets=True, input_preprocessor='default', gpu_thread_mode='gpu_private', per_gpu_thread_count=0, hierarchical_copy=False, network_topology=<NetworkTopology.DGX1: 'dgx1'>, gradient_repacking=0, compact_gradient_transfer=True, variable_consistency='strong', datasets_repeat_cached_sample=False, local_parameter_device='CPU', device='gpu', data_format='NCHW', num_intra_threads=None, num_inter_threads=0, use_numa_affinity=False, trace_file='', use_chrome_trace_format=True, tfprof_file=None, graph_file=None, partitioned_graph_file_prefix=None, optimizer='sgd', init_learning_rate=None, piecewise_learning_rate_schedule=None, num_epochs_per_decay=0.0, learning_rate_decay_factor=0.0, num_learning_rate_warmup_epochs=0.0, minimum_learning_rate=0.0, resnet_base_lr=None, momentum=0.9, rmsprop_decay=0.9, rmsprop_momentum=0.9, rmsprop_epsilon=1.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, gradient_clip=None, weight_decay=4e-05, gpu_memory_frac_for_testing=0.0, use_unified_memory=None, use_tf_layers=True, tf_random_seed=1234, debugger=None, use_python32_barrier=False, ml_perf=False, datasets_use_prefetch=True, datasets_prefetch_buffer_size=1, datasets_num_private_threads=None, datasets_use_caching=False, datasets_parallel_interleave_cycle_length=None, datasets_sloppy_parallel_interleave=False, datasets_parallel_interleave_prefetch=None, multi_device_iterator_max_buffer_size=1, winograd_nonfused=True, batchnorm_persistent=True, sync_on_finish=False, staged_vars=False, force_gpu_compatible=False, allow_growth=None, xla=False, xla_compile=False, fuse_decode_and_crop=True, distort_color_in_yiq=True, enable_optimizations=True, rewriter_config=None, loss_type_to_report='total_loss', single_l2_loss_op=False, use_resource_vars=False, compute_lr_on_cpu=False, sparse_to_dense_grads=False, mkl=False, kmp_blocktime=0, kmp_affinity='granularity=fine,verbose,compact,1,0', kmp_settings=1, use_fp16=False, fp16_loss_scale=None, fp16_vars=False, fp16_enable_auto_loss_scale=False, fp16_inc_loss_scale_every_n=1000, variable_update='distributed_replicated', all_reduce_spec=None, agg_small_grads_max_bytes=0, agg_small_grads_max_group=10, allreduce_merge_scope=1, job_name='worker', ps_hosts='h35n12:2220', worker_hosts='h35n12:2221,h35n12:2222,h35n13:2223,h35n13:2224,h35n12:2225,h35n13:2226', controller_host=None, task_index=4, server_protocol='grpc', cross_replica_sync=True, horovod_device='', summary_verbosity=0, save_summaries_steps=0, save_model_secs=0, save_model_steps=None, max_ckpts_to_keep=5, train_dir=None, eval_dir='/tmp/tf_cnn_benchmarks/eval', backbone_model_path=None, trt_mode='', trt_max_workspace_size_bytes=4294967296, benchmark_log_dir=None, benchmark_test_id=None)
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  768 global
+             64 per device
+Num batches: 100
+Num epochs:  0.06
+Devices:     ['/job:worker/replica:0/task:4/gpu:0', '/job:worker/replica:0/task:4/gpu:1']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 37.5 +/- 0.0 (jitter = 0.0)	8.018
+10	images/sec: 37.6 +/- 0.6 (jitter = 1.7)	7.874
+20	images/sec: 37.4 +/- 0.3 (jitter = 1.3)	7.783
+30	images/sec: 37.7 +/- 0.3 (jitter = 1.6)	7.897
+40	images/sec: 37.9 +/- 0.2 (jitter = 1.8)	7.906
+50	images/sec: 37.9 +/- 0.2 (jitter = 1.9)	7.731
+60	images/sec: 37.8 +/- 0.2 (jitter = 1.5)	7.741
+70	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.642
+80	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.634
+90	images/sec: 38.0 +/- 0.2 (jitter = 1.4)	7.708
+100	images/sec: 38.1 +/- 0.2 (jitter = 1.4)	7.758
+----------------------------------------------------------------
+total images/sec: 228.30
+----------------------------------------------------------------
+Params(model='resnet50', eval=False, eval_interval_secs=0, eval_during_training_every_n_steps=None, eval_during_training_every_n_epochs=None, eval_during_training_at_specified_steps=[], eval_during_training_at_specified_epochs=[], forward_only=False, freeze_when_forward_only=False, print_training_accuracy=False, batch_size=0, eval_batch_size=0, batch_group_size=1, num_batches=None, num_eval_batches=None, num_epochs=None, num_eval_epochs=None, stop_at_top_1_accuracy=None, collect_eval_results_async=False, num_warmup_batches=None, autotune_threshold=None, num_gpus=2, gpu_indices='', display_every=10, display_perf_ewma=None, data_dir=None, data_name=None, resize_method='bilinear', distortions=True, use_datasets=True, input_preprocessor='default', gpu_thread_mode='gpu_private', per_gpu_thread_count=0, hierarchical_copy=False, network_topology=<NetworkTopology.DGX1: 'dgx1'>, gradient_repacking=0, compact_gradient_transfer=True, variable_consistency='strong', datasets_repeat_cached_sample=False, local_parameter_device='CPU', device='gpu', data_format='NCHW', num_intra_threads=None, num_inter_threads=0, use_numa_affinity=False, trace_file='', use_chrome_trace_format=True, tfprof_file=None, graph_file=None, partitioned_graph_file_prefix=None, optimizer='sgd', init_learning_rate=None, piecewise_learning_rate_schedule=None, num_epochs_per_decay=0.0, learning_rate_decay_factor=0.0, num_learning_rate_warmup_epochs=0.0, minimum_learning_rate=0.0, resnet_base_lr=None, momentum=0.9, rmsprop_decay=0.9, rmsprop_momentum=0.9, rmsprop_epsilon=1.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, gradient_clip=None, weight_decay=4e-05, gpu_memory_frac_for_testing=0.0, use_unified_memory=None, use_tf_layers=True, tf_random_seed=1234, debugger=None, use_python32_barrier=False, ml_perf=False, datasets_use_prefetch=True, datasets_prefetch_buffer_size=1, datasets_num_private_threads=None, datasets_use_caching=False, datasets_parallel_interleave_cycle_length=None, datasets_sloppy_parallel_interleave=False, datasets_parallel_interleave_prefetch=None, multi_device_iterator_max_buffer_size=1, winograd_nonfused=True, batchnorm_persistent=True, sync_on_finish=False, staged_vars=False, force_gpu_compatible=False, allow_growth=None, xla=False, xla_compile=False, fuse_decode_and_crop=True, distort_color_in_yiq=True, enable_optimizations=True, rewriter_config=None, loss_type_to_report='total_loss', single_l2_loss_op=False, use_resource_vars=False, compute_lr_on_cpu=False, sparse_to_dense_grads=False, mkl=False, kmp_blocktime=0, kmp_affinity='granularity=fine,verbose,compact,1,0', kmp_settings=1, use_fp16=False, fp16_loss_scale=None, fp16_vars=False, fp16_enable_auto_loss_scale=False, fp16_inc_loss_scale_every_n=1000, variable_update='distributed_replicated', all_reduce_spec=None, agg_small_grads_max_bytes=0, agg_small_grads_max_group=10, allreduce_merge_scope=1, job_name='worker', ps_hosts='h35n12:2220', worker_hosts='h35n12:2221,h35n12:2222,h35n13:2223,h35n13:2224,h35n12:2225,h35n13:2226', controller_host=None, task_index=5, server_protocol='grpc', cross_replica_sync=True, horovod_device='', summary_verbosity=0, save_summaries_steps=0, save_model_secs=0, save_model_steps=None, max_ckpts_to_keep=5, train_dir=None, eval_dir='/tmp/tf_cnn_benchmarks/eval', backbone_model_path=None, trt_mode='', trt_max_workspace_size_bytes=4294967296, benchmark_log_dir=None, benchmark_test_id=None)
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  768 global
+             64 per device
+Num batches: 100
+Num epochs:  0.06
+Devices:     ['/job:worker/replica:0/task:5/gpu:0', '/job:worker/replica:0/task:5/gpu:1']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 37.5 +/- 0.0 (jitter = 0.0)	8.018
+10	images/sec: 37.6 +/- 0.6 (jitter = 1.7)	7.874
+20	images/sec: 37.4 +/- 0.3 (jitter = 1.3)	7.783
+30	images/sec: 37.7 +/- 0.3 (jitter = 1.6)	7.897
+40	images/sec: 37.9 +/- 0.2 (jitter = 1.8)	7.906
+50	images/sec: 37.9 +/- 0.2 (jitter = 1.9)	7.731
+60	images/sec: 37.8 +/- 0.2 (jitter = 1.5)	7.741
+70	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.642
+80	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.634
+90	images/sec: 38.0 +/- 0.2 (jitter = 1.4)	7.708
+100	images/sec: 38.1 +/- 0.2 (jitter = 1.4)	7.758
+----------------------------------------------------------------
+total images/sec: 228.30
+----------------------------------------------------------------
+Params(model='resnet50', eval=False, eval_interval_secs=0, eval_during_training_every_n_steps=None, eval_during_training_every_n_epochs=None, eval_during_training_at_specified_steps=[], eval_during_training_at_specified_epochs=[], forward_only=False, freeze_when_forward_only=False, print_training_accuracy=False, batch_size=0, eval_batch_size=0, batch_group_size=1, num_batches=None, num_eval_batches=None, num_epochs=None, num_eval_epochs=None, stop_at_top_1_accuracy=None, collect_eval_results_async=False, num_warmup_batches=None, autotune_threshold=None, num_gpus=2, gpu_indices='', display_every=10, display_perf_ewma=None, data_dir=None, data_name=None, resize_method='bilinear', distortions=True, use_datasets=True, input_preprocessor='default', gpu_thread_mode='gpu_private', per_gpu_thread_count=0, hierarchical_copy=False, network_topology=<NetworkTopology.DGX1: 'dgx1'>, gradient_repacking=0, compact_gradient_transfer=True, variable_consistency='strong', datasets_repeat_cached_sample=False, local_parameter_device='CPU', device='gpu', data_format='NCHW', num_intra_threads=None, num_inter_threads=0, use_numa_affinity=False, trace_file='', use_chrome_trace_format=True, tfprof_file=None, graph_file=None, partitioned_graph_file_prefix=None, optimizer='sgd', init_learning_rate=None, piecewise_learning_rate_schedule=None, num_epochs_per_decay=0.0, learning_rate_decay_factor=0.0, num_learning_rate_warmup_epochs=0.0, minimum_learning_rate=0.0, resnet_base_lr=None, momentum=0.9, rmsprop_decay=0.9, rmsprop_momentum=0.9, rmsprop_epsilon=1.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, gradient_clip=None, weight_decay=4e-05, gpu_memory_frac_for_testing=0.0, use_unified_memory=None, use_tf_layers=True, tf_random_seed=1234, debugger=None, use_python32_barrier=False, ml_perf=False, datasets_use_prefetch=True, datasets_prefetch_buffer_size=1, datasets_num_private_threads=None, datasets_use_caching=False, datasets_parallel_interleave_cycle_length=None, datasets_sloppy_parallel_interleave=False, datasets_parallel_interleave_prefetch=None, multi_device_iterator_max_buffer_size=1, winograd_nonfused=True, batchnorm_persistent=True, sync_on_finish=False, staged_vars=False, force_gpu_compatible=False, allow_growth=None, xla=False, xla_compile=False, fuse_decode_and_crop=True, distort_color_in_yiq=True, enable_optimizations=True, rewriter_config=None, loss_type_to_report='total_loss', single_l2_loss_op=False, use_resource_vars=False, compute_lr_on_cpu=False, sparse_to_dense_grads=False, mkl=False, kmp_blocktime=0, kmp_affinity='granularity=fine,verbose,compact,1,0', kmp_settings=1, use_fp16=False, fp16_loss_scale=None, fp16_vars=False, fp16_enable_auto_loss_scale=False, fp16_inc_loss_scale_every_n=1000, variable_update='distributed_replicated', all_reduce_spec=None, agg_small_grads_max_bytes=0, agg_small_grads_max_group=10, allreduce_merge_scope=1, job_name='worker', ps_hosts='h35n12:2220', worker_hosts='h35n12:2221,h35n12:2222,h35n13:2223,h35n13:2224,h35n12:2225,h35n13:2226', controller_host=None, task_index=3, server_protocol='grpc', cross_replica_sync=True, horovod_device='', summary_verbosity=0, save_summaries_steps=0, save_model_secs=0, save_model_steps=None, max_ckpts_to_keep=5, train_dir=None, eval_dir='/tmp/tf_cnn_benchmarks/eval', backbone_model_path=None, trt_mode='', trt_max_workspace_size_bytes=4294967296, benchmark_log_dir=None, benchmark_test_id=None)
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  768 global
+             64 per device
+Num batches: 100
+Num epochs:  0.06
+Devices:     ['/job:worker/replica:0/task:3/gpu:0', '/job:worker/replica:0/task:3/gpu:1']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 37.5 +/- 0.0 (jitter = 0.0)	8.018
+10	images/sec: 37.6 +/- 0.6 (jitter = 1.7)	7.874
+20	images/sec: 37.4 +/- 0.3 (jitter = 1.3)	7.783
+30	images/sec: 37.7 +/- 0.3 (jitter = 1.6)	7.897
+40	images/sec: 37.9 +/- 0.2 (jitter = 1.8)	7.906
+50	images/sec: 37.9 +/- 0.2 (jitter = 1.9)	7.731
+60	images/sec: 37.8 +/- 0.2 (jitter = 1.5)	7.741
+70	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.642
+80	images/sec: 37.9 +/- 0.2 (jitter = 1.5)	7.634
+90	images/sec: 38.0 +/- 0.2 (jitter = 1.4)	7.708
+100	images/sec: 38.1 +/- 0.2 (jitter = 1.4)	7.758
+----------------------------------------------------------------
+total images/sec: 228.30
+----------------------------------------------------------------
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 301437: <n2_dr_6w_g2_e100> in cluster <summit> Exited
+
+Job <n2_dr_6w_g2_e100> was submitted from host <login5> by user <jw447> in cluster <summit> at Mon Mar 18 07:02:30 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Mar 18 07:15:05 2019
+                            <42*h35n12>
+                            <42*h35n13>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Mon Mar 18 07:15:05 2019
+Terminated at Mon Mar 18 07:30:44 2019
+Results reported at Mon Mar 18 07:30:44 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n2_dr_6w_g2_e100.e> for stderr output of this job.
+

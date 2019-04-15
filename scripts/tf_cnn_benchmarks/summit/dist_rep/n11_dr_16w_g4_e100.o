@@ -1,0 +1,36 @@
+=====================================================
+Thu Mar 21 18:18:40 EDT 2019
+--ps_hosts=a29n06:2220
+--worker_hosts=a29n06:2221,a29n07:2222,a29n08:2223,a29n09:2224,a29n10:2225,a29n11:2226,e33n07:2227,e33n08:2228,e33n09:2229,e33n10:22210,e33n11:22211,:22212,:22213,:22214,:22215,:22216
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 304310: <n11_dr_16w_g4_e100> in cluster <summit> Exited
+
+Job <n11_dr_16w_g4_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Thu Mar 21 01:54:53 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Thu Mar 21 18:18:30 2019
+                            <42*a29n06>
+                            <42*a29n07>
+                            <42*a29n08>
+                            <42*a29n09>
+                            <42*a29n10>
+                            <42*a29n11>
+                            <42*e33n07>
+                            <42*e33n08>
+                            <42*e33n09>
+                            <42*e33n10>
+                            <42*e33n11>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Thu Mar 21 18:18:30 2019
+Terminated at Thu Mar 21 19:18:53 2019
+Results reported at Thu Mar 21 19:18:53 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n11_dr_16w_g4_e100.e> for stderr output of this job.
+

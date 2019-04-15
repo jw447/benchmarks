@@ -1,0 +1,24 @@
+=====================================================
+Mon Apr 15 02:39:08 EDT 2019
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 342099: <n1_g6_b512_t1> in cluster <summit> Exited
+
+Job <n1_g6_b512_t1> was submitted from host <login5> by user <jw447> in cluster <summit> at Mon Apr 15 02:38:48 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr 15 02:39:03 2019
+                            <42*h36n17>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/rep/gpu_thread> was used as the working directory.
+Started at Mon Apr 15 02:39:03 2019
+Terminated at Mon Apr 15 02:39:18 2019
+Results reported at Mon Apr 15 02:39:18 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g6_b512_t1.e> for stderr output of this job.
+

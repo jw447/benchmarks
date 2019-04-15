@@ -32,6 +32,8 @@ import flags
 import mlperf
 from cnn_util import log_fn
 
+#from tensorflow.python.util.func_NT import dump_func_nt
+import time
 
 flags.define_flags()
 for name in flags.param_specs.keys():
@@ -50,23 +52,34 @@ def main(positional_arguments):
   # '--distortions=True False', where False is a positional argument. To prevent
   # this from silently running with distortions, we do not allow positional
   # arguments.
+  param_setup_start = time.time()
   assert len(positional_arguments) >= 1
   if len(positional_arguments) > 1:
     raise ValueError('Received unknown positional arguments: %s'
                      % positional_arguments[1:])
 
   params = benchmark_cnn.make_params_from_flags()
+  #print(params)
   with mlperf.mlperf_logger(absl_flags.FLAGS.ml_perf_compliance_logging,
                             params.model):
     params = benchmark_cnn.setup(params)
+    param_setup = time.time() - param_setup_start
+    print("Parameter setup time: %.3f" % param_setup)    
+    
+    # create an instance from BenchmarkCNN class
+    bench_start = time.time()
     bench = benchmark_cnn.BenchmarkCNN(params)
-
+    bench_create = time.time() - bench_start
+    print("Benchmark construction time: %.3f" % bench_create)
+ 
     tfversion = cnn_util.tensorflow_version_tuple()
     log_fn('TensorFlow:  %i.%i' % (tfversion[0], tfversion[1]))
 
     bench.print_info()
+
+    run_start = time.time()
     bench.run()
-
-
+    run_time = time.time() - run_start
+    print("Benchmark run time: %.3f" % run_time)
 if __name__ == '__main__':
   app.run(main)  # Raises error on invalid flags, unlike tf.app.run()

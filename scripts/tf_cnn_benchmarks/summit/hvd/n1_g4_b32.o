@@ -1,0 +1,96 @@
+=====================================================
+Mon Apr  8 12:29:58 EDT 2019
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 329161: <n1_g4_b32> in cluster <summit> Exited
+
+Job <n1_g4_b32> was submitted from host <login1> by user <jw447> in cluster <summit> at Mon Apr  8 12:21:05 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr  8 12:29:55 2019
+                            <42*h36n15>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Mon Apr  8 12:29:55 2019
+Terminated at Mon Apr  8 12:29:59 2019
+Results reported at Mon Apr  8 12:29:59 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g4_b32.e> for stderr output of this job.
+
+=====================================================
+Mon Apr  8 12:30:46 EDT 2019
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 329180: <n1_h_g4_b32> in cluster <summit> Exited
+
+Job <n1_h_g4_b32> was submitted from host <login1> by user <jw447> in cluster <summit> at Mon Apr  8 12:30:20 2019
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr  8 12:30:44 2019
+                            <42*h36n18>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Mon Apr  8 12:30:44 2019
+Terminated at Mon Apr  8 12:30:48 2019
+Results reported at Mon Apr  8 12:30:48 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g4_b32.e> for stderr output of this job.
+
+=====================================================
+Mon Apr  8 13:31:39 EDT 2019
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 329297: <n1_h_g4_b32> in cluster <summit> Exited
+
+Job <n1_h_g4_b32> was submitted from host <login1> by user <jw447> in cluster <summit> at Mon Apr  8 13:31:08 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr  8 13:31:34 2019
+                            <42*d16n10>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Mon Apr  8 13:31:34 2019
+Terminated at Mon Apr  8 13:31:40 2019
+Results reported at Mon Apr  8 13:31:40 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g4_b32.e> for stderr output of this job.
+
+=====================================================
+Mon Apr  8 13:42:15 EDT 2019
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 329322: <n1_h_g4_b32> in cluster <summit> Exited
+
+Job <n1_h_g4_b32> was submitted from host <login1> by user <jw447> in cluster <summit> at Mon Apr  8 13:37:23 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr  8 13:42:13 2019
+                            <42*h36n17>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Mon Apr  8 13:42:13 2019
+Terminated at Mon Apr  8 13:42:16 2019
+Results reported at Mon Apr  8 13:42:16 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g4_b32.e> for stderr output of this job.
+

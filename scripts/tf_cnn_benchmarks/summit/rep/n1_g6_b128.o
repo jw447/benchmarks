@@ -1,0 +1,62 @@
+=====================================================
+Mon Apr  8 12:00:06 EDT 2019
+Parameter setup time: 7.676
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  768 global
+             128 per device
+Num batches: 100
+Num epochs:  0.06
+Devices:     ['/gpu:0', '/gpu:1', '/gpu:2', '/gpu:3', '/gpu:4', '/gpu:5']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   momentum
+Variables:   replicated
+AllReduce:   nccl
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	base_loss
+1	images/sec: 2373.7 +/- 0.0 (jitter = 0.0)	7.320
+10	images/sec: 2280.3 +/- 21.6 (jitter = 80.8)	7.140
+20	images/sec: 2301.7 +/- 15.1 (jitter = 70.1)	7.128
+30	images/sec: 2301.8 +/- 12.0 (jitter = 79.5)	6.980
+40	images/sec: 2314.9 +/- 10.0 (jitter = 61.6)	6.959
+50	images/sec: 2313.5 +/- 8.8 (jitter = 62.2)	6.945
+60	images/sec: 2312.7 +/- 7.5 (jitter = 53.9)	6.931
+70	images/sec: 2314.1 +/- 6.8 (jitter = 52.8)	6.923
+80	images/sec: 2316.5 +/- 6.2 (jitter = 54.2)	6.927
+90	images/sec: 2317.0 +/- 5.7 (jitter = 54.5)	6.951
+100	images/sec: 2317.2 +/- 5.4 (jitter = 52.4)	6.936
+----------------------------------------------------------------
+total images/sec: 2316.69
+----------------------------------------------------------------
+Benchmark run time: 247.664
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 329092: <n1_g6_b128> in cluster <summit> Done
+
+Job <n1_g6_b128> was submitted from host <login1> by user <jw447> in cluster <summit> at Mon Apr  8 11:39:23 2019
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr  8 12:00:03 2019
+                            <42*h36n15>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/rep> was used as the working directory.
+Started at Mon Apr  8 12:00:03 2019
+Terminated at Mon Apr  8 12:04:29 2019
+Results reported at Mon Apr  8 12:04:29 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g6_b128.e> for stderr output of this job.
+

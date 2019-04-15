@@ -1,0 +1,62 @@
+=====================================================
+Mon Apr  8 11:39:10 EDT 2019
+Parameter setup time: 7.898
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  384 global
+             64 per device
+Num batches: 100
+Num epochs:  0.03
+Devices:     ['/gpu:0', '/gpu:1', '/gpu:2', '/gpu:3', '/gpu:4', '/gpu:5']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   momentum
+Variables:   replicated
+AllReduce:   nccl
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	base_loss
+1	images/sec: 1909.9 +/- 0.0 (jitter = 0.0)	7.264
+10	images/sec: 1919.3 +/- 15.6 (jitter = 57.1)	7.254
+20	images/sec: 1922.5 +/- 13.5 (jitter = 43.1)	7.291
+30	images/sec: 1903.7 +/- 12.2 (jitter = 67.8)	7.176
+40	images/sec: 1903.5 +/- 11.5 (jitter = 74.4)	7.104
+50	images/sec: 1892.2 +/- 10.2 (jitter = 77.6)	7.093
+60	images/sec: 1900.2 +/- 9.1 (jitter = 74.4)	7.022
+70	images/sec: 1903.0 +/- 8.1 (jitter = 70.7)	7.031
+80	images/sec: 1898.0 +/- 7.8 (jitter = 69.6)	6.974
+90	images/sec: 1895.3 +/- 7.4 (jitter = 75.8)	6.997
+100	images/sec: 1891.8 +/- 7.1 (jitter = 79.0)	6.956
+----------------------------------------------------------------
+total images/sec: 1891.14
+----------------------------------------------------------------
+Benchmark run time: 233.749
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 329090: <n1_g6_b64> in cluster <summit> Done
+
+Job <n1_g6_b64> was submitted from host <login1> by user <jw447> in cluster <summit> at Mon Apr  8 11:38:52 2019
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr  8 11:39:07 2019
+                            <42*h36n16>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/rep> was used as the working directory.
+Started at Mon Apr  8 11:39:07 2019
+Terminated at Mon Apr  8 11:43:19 2019
+Results reported at Mon Apr  8 11:43:19 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g6_b64.e> for stderr output of this job.
+

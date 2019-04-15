@@ -1,0 +1,656 @@
+=====================================================
+Fri Mar 22 13:44:09 EDT 2019
+--worker_hosts=b09n05:2221,b09n06:2222,b09n07:2223,b09n08:2224,b09n09:2225,b09n10:2226,b09n11:2227,b09n12:2228
+Parameter setup time: 2.255
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 378.9 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 379.8 +/- 0.7 (jitter = 2.4)	7.880
+20	images/sec: 379.8 +/- 0.4 (jitter = 2.1)	7.910
+30	images/sec: 379.9 +/- 0.3 (jitter = 1.9)	7.820
+40	images/sec: 380.1 +/- 0.3 (jitter = 2.3)	8.004
+50	images/sec: 380.4 +/- 0.3 (jitter = 2.5)	7.769
+60	images/sec: 380.4 +/- 0.3 (jitter = 2.5)	8.113
+70	images/sec: 380.6 +/- 0.3 (jitter = 2.7)	7.817
+80	images/sec: 380.6 +/- 0.2 (jitter = 2.8)	7.978
+90	images/sec: 380.7 +/- 0.2 (jitter = 2.9)	8.101
+100	images/sec: 380.6 +/- 0.2 (jitter = 2.8)	8.034
+----------------------------------------------------------------
+total images/sec: 380.42
+----------------------------------------------------------------
+Benchmark run time: 37.527
+Parameter setup time: 2.868
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 378.8 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 379.3 +/- 0.6 (jitter = 2.0)	7.880
+20	images/sec: 380.1 +/- 0.5 (jitter = 3.3)	7.910
+30	images/sec: 379.6 +/- 0.4 (jitter = 2.8)	7.820
+40	images/sec: 379.8 +/- 0.3 (jitter = 2.3)	8.004
+50	images/sec: 379.8 +/- 0.3 (jitter = 2.3)	7.770
+60	images/sec: 380.1 +/- 0.3 (jitter = 2.2)	8.115
+70	images/sec: 380.2 +/- 0.2 (jitter = 2.4)	7.815
+80	images/sec: 380.3 +/- 0.2 (jitter = 2.5)	7.976
+90	images/sec: 380.3 +/- 0.2 (jitter = 2.5)	8.100
+100	images/sec: 380.3 +/- 0.2 (jitter = 2.5)	8.032
+----------------------------------------------------------------
+total images/sec: 380.16
+----------------------------------------------------------------
+Benchmark run time: 37.473
+Parameter setup time: 1.879
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 379.9 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 379.4 +/- 0.5 (jitter = 1.8)	7.880
+20	images/sec: 379.4 +/- 0.4 (jitter = 1.5)	7.910
+30	images/sec: 379.4 +/- 0.3 (jitter = 1.6)	7.821
+40	images/sec: 379.1 +/- 0.3 (jitter = 1.5)	8.003
+50	images/sec: 379.2 +/- 0.2 (jitter = 1.3)	7.769
+60	images/sec: 379.1 +/- 0.2 (jitter = 1.2)	8.113
+70	images/sec: 379.1 +/- 0.2 (jitter = 1.2)	7.817
+80	images/sec: 379.0 +/- 0.2 (jitter = 1.2)	7.977
+90	images/sec: 379.1 +/- 0.2 (jitter = 1.2)	8.101
+100	images/sec: 379.1 +/- 0.2 (jitter = 1.2)	8.037
+----------------------------------------------------------------
+total images/sec: 378.92
+----------------------------------------------------------------
+Benchmark run time: 38.841
+Parameter setup time: 1.829
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 379.1 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 380.5 +/- 0.7 (jitter = 2.6)	7.880
+20	images/sec: 379.9 +/- 0.5 (jitter = 1.8)	7.910
+30	images/sec: 379.7 +/- 0.4 (jitter = 2.1)	7.820
+40	images/sec: 380.1 +/- 0.4 (jitter = 2.3)	8.005
+50	images/sec: 380.2 +/- 0.3 (jitter = 2.3)	7.768
+60	images/sec: 380.1 +/- 0.3 (jitter = 2.5)	8.116
+70	images/sec: 380.2 +/- 0.3 (jitter = 2.4)	7.817
+80	images/sec: 380.3 +/- 0.2 (jitter = 2.5)	7.980
+90	images/sec: 380.2 +/- 0.2 (jitter = 2.5)	8.094
+100	images/sec: 380.2 +/- 0.2 (jitter = 2.5)	8.033
+----------------------------------------------------------------
+total images/sec: 380.07
+----------------------------------------------------------------
+Benchmark run time: 38.984
+Parameter setup time: 2.142
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 377.9 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 379.4 +/- 0.3 (jitter = 1.2)	7.880
+20	images/sec: 379.8 +/- 0.4 (jitter = 1.1)	7.910
+30	images/sec: 379.5 +/- 0.3 (jitter = 1.3)	7.820
+40	images/sec: 379.5 +/- 0.2 (jitter = 1.1)	8.005
+50	images/sec: 379.7 +/- 0.2 (jitter = 1.2)	7.769
+60	images/sec: 379.8 +/- 0.2 (jitter = 1.2)	8.114
+70	images/sec: 379.6 +/- 0.2 (jitter = 1.3)	7.819
+80	images/sec: 379.6 +/- 0.2 (jitter = 1.2)	7.977
+90	images/sec: 379.6 +/- 0.2 (jitter = 1.2)	8.098
+100	images/sec: 379.6 +/- 0.1 (jitter = 1.3)	8.040
+----------------------------------------------------------------
+total images/sec: 379.42
+----------------------------------------------------------------
+Benchmark run time: 39.330
+Parameter setup time: 1.919
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 380.1 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 380.0 +/- 0.7 (jitter = 3.1)	7.880
+20	images/sec: 380.0 +/- 0.5 (jitter = 2.7)	7.910
+30	images/sec: 380.2 +/- 0.4 (jitter = 2.6)	7.820
+40	images/sec: 380.1 +/- 0.3 (jitter = 2.3)	8.005
+50	images/sec: 380.1 +/- 0.4 (jitter = 2.4)	7.769
+60	images/sec: 380.1 +/- 0.3 (jitter = 2.4)	8.116
+70	images/sec: 380.1 +/- 0.3 (jitter = 2.3)	7.817
+80	images/sec: 380.0 +/- 0.3 (jitter = 2.4)	7.981
+90	images/sec: 380.1 +/- 0.3 (jitter = 2.5)	8.098
+100	images/sec: 380.2 +/- 0.2 (jitter = 2.7)	8.033
+----------------------------------------------------------------
+total images/sec: 380.07
+----------------------------------------------------------------
+Benchmark run time: 39.840
+Parameter setup time: 1.883
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 380.4 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 379.0 +/- 0.2 (jitter = 0.6)	7.880
+20	images/sec: 379.3 +/- 0.2 (jitter = 0.6)	7.910
+30	images/sec: 379.0 +/- 0.2 (jitter = 1.0)	7.820
+40	images/sec: 379.0 +/- 0.2 (jitter = 1.3)	8.004
+50	images/sec: 379.2 +/- 0.2 (jitter = 1.5)	7.769
+60	images/sec: 379.2 +/- 0.2 (jitter = 1.4)	8.114
+70	images/sec: 379.1 +/- 0.2 (jitter = 1.3)	7.815
+80	images/sec: 379.2 +/- 0.2 (jitter = 1.3)	7.979
+90	images/sec: 379.2 +/- 0.2 (jitter = 1.3)	8.099
+100	images/sec: 379.3 +/- 0.2 (jitter = 1.4)	8.032
+----------------------------------------------------------------
+total images/sec: 379.11
+----------------------------------------------------------------
+Benchmark run time: 40.257
+Parameter setup time: 2.406
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 382.3 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 380.2 +/- 0.3 (jitter = 0.6)	7.880
+20	images/sec: 380.2 +/- 0.4 (jitter = 0.8)	7.910
+30	images/sec: 380.1 +/- 0.3 (jitter = 0.9)	7.820
+40	images/sec: 380.0 +/- 0.2 (jitter = 1.0)	8.004
+50	images/sec: 380.4 +/- 0.3 (jitter = 1.1)	7.769
+60	images/sec: 380.3 +/- 0.2 (jitter = 1.1)	8.116
+70	images/sec: 380.3 +/- 0.2 (jitter = 1.0)	7.819
+80	images/sec: 380.3 +/- 0.2 (jitter = 1.0)	7.976
+90	images/sec: 380.4 +/- 0.2 (jitter = 1.1)	8.097
+100	images/sec: 380.4 +/- 0.2 (jitter = 1.0)	8.034
+----------------------------------------------------------------
+total images/sec: 380.24
+----------------------------------------------------------------
+Benchmark run time: 40.305
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 305595: <n8_hvd_8w_g1_e100_syn> in cluster <summit> Done
+
+Job <n8_hvd_8w_g1_e100_syn> was submitted from host <login2> by user <jw447> in cluster <summit> at Fri Mar 22 13:43:59 2019
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <jw447> in cluster <summit> at Fri Mar 22 13:44:01 2019
+                            <42*b09n05>
+                            <42*b09n06>
+                            <42*b09n07>
+                            <42*b09n08>
+                            <42*b09n09>
+                            <42*b09n10>
+                            <42*b09n11>
+                            <42*b09n12>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Fri Mar 22 13:44:01 2019
+Terminated at Fri Mar 22 13:45:12 2019
+Results reported at Fri Mar 22 13:45:12 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n8_hvd_8w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Sun Mar 24 10:54:55 EDT 2019
+--worker_hosts=h35n05:2221,h35n06:2222,h35n07:2223,h35n08:2224,h35n12:2225,h35n13:2226,h35n14:2227,h35n15:2228
+Parameter setup time: 1.365
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 382.4 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 381.8 +/- 0.4 (jitter = 1.3)	7.880
+20	images/sec: 381.6 +/- 0.3 (jitter = 1.1)	7.910
+30	images/sec: 381.3 +/- 0.3 (jitter = 1.9)	7.820
+40	images/sec: 381.0 +/- 0.3 (jitter = 1.8)	8.003
+50	images/sec: 381.0 +/- 0.3 (jitter = 2.1)	7.769
+60	images/sec: 380.6 +/- 0.4 (jitter = 2.0)	8.115
+70	images/sec: 380.4 +/- 0.3 (jitter = 2.0)	7.814
+80	images/sec: 380.4 +/- 0.3 (jitter = 2.1)	7.974
+90	images/sec: 380.4 +/- 0.3 (jitter = 2.1)	8.089
+100	images/sec: 380.6 +/- 0.3 (jitter = 2.1)	8.039
+----------------------------------------------------------------
+total images/sec: 380.38
+Parameter setup time: 1.307
+----------------------------------------------------------------
+Parameter setup time: 1.309
+Benchmark construction time: 0.000
+Benchmark run time: 33.637
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+TensorFlow:  1.13
+Model:       resnet50
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Dataset:     imagenet (synthetic)
+Mode:        training
+Mode:        training
+SingleSess:  False
+SingleSess:  False
+Batch size:  64 global
+Batch size:  64 global
+             64 per device
+             64 per device
+Num batches: 100
+Num batches: 100
+Num epochs:  0.00
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+NUMA bind:   False
+Data format: NCHW
+Data format: NCHW
+Optimizer:   sgd
+Optimizer:   sgd
+Variables:   horovod
+Variables:   horovod
+==========
+==========
+Generating training model
+Generating training model
+Initializing graph
+Initializing graph
+Running warm up
+Running warm up
+Done warm up
+Done warm up
+Step	Img/sec	total_loss
+Step	Img/sec	total_loss
+1	images/sec: 380.7 +/- 0.0 (jitter = 0.0)	8.220
+1	images/sec: 380.5 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 381.5 +/- 0.5 (jitter = 1.5)	7.880
+10	images/sec: 380.6 +/- 0.1 (jitter = 0.2)	7.880
+20	images/sec: 381.2 +/- 0.4 (jitter = 1.8)	7.910
+20	images/sec: 380.6 +/- 0.3 (jitter = 0.5)	7.910
+30	images/sec: 381.1 +/- 0.3 (jitter = 2.2)	7.820
+30	images/sec: 380.5 +/- 0.3 (jitter = 0.8)	7.821
+40	images/sec: 381.0 +/- 0.3 (jitter = 2.4)	8.004
+40	images/sec: 380.2 +/- 0.4 (jitter = 0.9)	8.004
+50	images/sec: 380.8 +/- 0.3 (jitter = 2.2)	7.768
+50	images/sec: 380.2 +/- 0.3 (jitter = 0.8)	7.770
+60	images/sec: 380.8 +/- 0.2 (jitter = 2.2)	8.113
+60	images/sec: 380.2 +/- 0.3 (jitter = 0.9)	8.112
+70	images/sec: 380.7 +/- 0.2 (jitter = 2.2)	7.819
+70	images/sec: 380.3 +/- 0.2 (jitter = 0.9)	7.820
+80	images/sec: 380.9 +/- 0.2 (jitter = 2.1)	7.979
+80	images/sec: 380.2 +/- 0.2 (jitter = 0.9)	7.975
+90	images/sec: 380.7 +/- 0.3 (jitter = 2.2)	8.093
+90	images/sec: 380.2 +/- 0.2 (jitter = 0.9)	8.103
+100	images/sec: 380.7 +/- 0.3 (jitter = 2.3)	8.040
+100	images/sec: 380.2 +/- 0.2 (jitter = 0.9)	8.032
+----------------------------------------------------------------
+----------------------------------------------------------------
+total images/sec: 380.50
+total images/sec: 380.02
+----------------------------------------------------------------
+----------------------------------------------------------------
+Benchmark run time: 33.681
+Benchmark run time: 33.693
+Parameter setup time: 1.459
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 378.0 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 381.2 +/- 0.7 (jitter = 2.5)	7.880
+20	images/sec: 380.7 +/- 0.5 (jitter = 2.2)	7.910
+30	images/sec: 380.7 +/- 0.4 (jitter = 1.8)	7.820
+40	images/sec: 380.3 +/- 0.3 (jitter = 2.4)	8.004
+50	images/sec: 380.2 +/- 0.3 (jitter = 2.4)	7.768
+60	images/sec: 380.4 +/- 0.3 (jitter = 2.2)	8.112
+70	images/sec: 380.4 +/- 0.3 (jitter = 2.5)	7.814
+80	images/sec: 380.3 +/- 0.2 (jitter = 2.5)	7.975
+90	images/sec: 380.1 +/- 0.2 (jitter = 2.7)	8.096
+100	images/sec: 380.2 +/- 0.2 (jitter = 2.7)	8.032
+----------------------------------------------------------------
+total images/sec: 380.06
+----------------------------------------------------------------
+Benchmark run time: 33.619
+Parameter setup time: 1.647
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 379.4 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 379.0 +/- 0.6 (jitter = 1.9)	7.880
+20	images/sec: 378.5 +/- 0.3 (jitter = 1.6)	7.910
+30	images/sec: 378.2 +/- 0.3 (jitter = 1.3)	7.820
+40	images/sec: 378.4 +/- 0.3 (jitter = 1.6)	8.005
+50	images/sec: 378.3 +/- 0.3 (jitter = 1.6)	7.770
+60	images/sec: 378.2 +/- 0.2 (jitter = 1.6)	8.112
+70	images/sec: 378.1 +/- 0.2 (jitter = 1.6)	7.817
+80	images/sec: 378.3 +/- 0.2 (jitter = 1.6)	7.970
+90	images/sec: 378.4 +/- 0.2 (jitter = 1.7)	8.094
+100	images/sec: 378.4 +/- 0.2 (jitter = 1.7)	8.041
+----------------------------------------------------------------
+total images/sec: 378.24
+----------------------------------------------------------------
+Benchmark run time: 39.940
+Parameter setup time: 1.516
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 379.9 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 379.1 +/- 0.4 (jitter = 1.2)	7.880
+20	images/sec: 379.2 +/- 0.3 (jitter = 1.1)	7.910
+30	images/sec: 379.2 +/- 0.2 (jitter = 1.1)	7.821
+40	images/sec: 379.0 +/- 0.2 (jitter = 1.2)	8.004
+50	images/sec: 379.3 +/- 0.2 (jitter = 1.2)	7.767
+60	images/sec: 379.1 +/- 0.2 (jitter = 1.2)	8.115
+70	images/sec: 379.2 +/- 0.2 (jitter = 1.4)	7.817
+80	images/sec: 379.2 +/- 0.2 (jitter = 1.3)	7.975
+90	images/sec: 379.2 +/- 0.1 (jitter = 1.3)	8.098
+100	images/sec: 379.2 +/- 0.1 (jitter = 1.2)	8.030
+----------------------------------------------------------------
+total images/sec: 379.03
+----------------------------------------------------------------
+Benchmark run time: 40.421
+Parameter setup time: 1.525
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 378.1 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 379.2 +/- 1.2 (jitter = 2.1)	7.880
+20	images/sec: 380.5 +/- 0.7 (jitter = 3.0)	7.910
+30	images/sec: 380.5 +/- 0.5 (jitter = 3.1)	7.821
+40	images/sec: 380.5 +/- 0.4 (jitter = 2.6)	8.005
+50	images/sec: 380.5 +/- 0.4 (jitter = 2.6)	7.768
+60	images/sec: 380.5 +/- 0.3 (jitter = 2.7)	8.115
+70	images/sec: 380.7 +/- 0.3 (jitter = 2.7)	7.818
+80	images/sec: 380.7 +/- 0.3 (jitter = 2.8)	7.980
+90	images/sec: 380.6 +/- 0.2 (jitter = 2.7)	8.095
+100	images/sec: 380.5 +/- 0.2 (jitter = 2.6)	8.040
+----------------------------------------------------------------
+total images/sec: 380.38
+----------------------------------------------------------------
+Benchmark run time: 40.200
+Parameter setup time: 4.277
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 378.3 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 379.2 +/- 0.3 (jitter = 1.3)	7.880
+20	images/sec: 379.3 +/- 0.4 (jitter = 1.4)	7.910
+30	images/sec: 379.3 +/- 0.3 (jitter = 1.2)	7.820
+40	images/sec: 379.3 +/- 0.3 (jitter = 1.5)	8.004
+50	images/sec: 379.3 +/- 0.2 (jitter = 1.5)	7.768
+60	images/sec: 379.2 +/- 0.2 (jitter = 1.3)	8.114
+70	images/sec: 379.2 +/- 0.2 (jitter = 1.3)	7.817
+80	images/sec: 379.4 +/- 0.2 (jitter = 1.2)	7.976
+90	images/sec: 379.4 +/- 0.1 (jitter = 1.3)	8.095
+100	images/sec: 379.5 +/- 0.1 (jitter = 1.3)	8.029
+----------------------------------------------------------------
+total images/sec: 379.33
+----------------------------------------------------------------
+Benchmark run time: 41.721
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 306813: <n8_hvd_8w_g1_e100_syn> in cluster <summit> Done
+
+Job <n8_hvd_8w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Sun Mar 24 10:50:56 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Sun Mar 24 10:54:47 2019
+                            <42*h35n05>
+                            <42*h35n06>
+                            <42*h35n07>
+                            <42*h35n08>
+                            <42*h35n12>
+                            <42*h35n13>
+                            <42*h35n14>
+                            <42*h35n15>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Sun Mar 24 10:54:47 2019
+Terminated at Sun Mar 24 10:56:05 2019
+Results reported at Sun Mar 24 10:56:05 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n8_hvd_8w_g1_e100_syn.e> for stderr output of this job.
+

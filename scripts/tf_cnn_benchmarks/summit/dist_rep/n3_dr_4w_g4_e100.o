@@ -1,0 +1,28 @@
+=====================================================
+Thu Mar 21 11:06:58 EDT 2019
+--ps_hosts=g25n08:2220
+--worker_hosts=g25n08:2221,h35n15:2222,h35n16:2223,:2224
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 304294: <n3_dr_4w_g4_e100> in cluster <summit> Exited
+
+Job <n3_dr_4w_g4_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Thu Mar 21 01:47:28 2019
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <jw447> in cluster <summit> at Thu Mar 21 11:06:52 2019
+                            <42*g25n08>
+                            <42*h35n15>
+                            <42*h35n16>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Thu Mar 21 11:06:52 2019
+Terminated at Thu Mar 21 11:37:10 2019
+Results reported at Thu Mar 21 11:37:10 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n3_dr_4w_g4_e100.e> for stderr output of this job.
+

@@ -1,0 +1,64 @@
+=====================================================
+Thu Mar 21 06:26:37 EDT 2019
+--ps_hosts=b16n07:2220
+--worker_hosts=b16n07:2221
+Parameter setup time: 0.001
+Benchmark construction time: 2.178
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  128 global
+             64 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/job:worker/replica:0/task:0/gpu:0', '/job:worker/replica:0/task:0/gpu:1']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 512.7 +/- 0.0 (jitter = 0.0)	8.047
+10	images/sec: 448.8 +/- 29.3 (jitter = 63.6)	7.919
+20	images/sec: 505.4 +/- 19.3 (jitter = 59.1)	7.822
+30	images/sec: 455.9 +/- 20.2 (jitter = 52.5)	8.011
+40	images/sec: 474.8 +/- 15.6 (jitter = 52.5)	8.007
+50	images/sec: 492.5 +/- 13.1 (jitter = 53.9)	7.825
+60	images/sec: 502.3 +/- 11.3 (jitter = 54.9)	7.954
+70	images/sec: 506.2 +/- 10.2 (jitter = 57.8)	7.814
+80	images/sec: 511.8 +/- 9.2 (jitter = 58.6)	7.850
+90	images/sec: 497.9 +/- 9.5 (jitter = 63.6)	7.936
+100	images/sec: 501.3 +/- 8.7 (jitter = 65.9)	8.088
+----------------------------------------------------------------
+total images/sec: 501.13
+----------------------------------------------------------------
+Benchmark run time: 60.808
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 304281: <n1_dr_1w_g2_e100> in cluster <summit> Exited
+
+Job <n1_dr_1w_g2_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Thu Mar 21 01:34:13 2019
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <jw447> in cluster <summit> at Thu Mar 21 06:26:35 2019
+                            <42*b16n07>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Thu Mar 21 06:26:35 2019
+Terminated at Thu Mar 21 06:56:46 2019
+Results reported at Thu Mar 21 06:56:46 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_dr_1w_g2_e100.e> for stderr output of this job.
+

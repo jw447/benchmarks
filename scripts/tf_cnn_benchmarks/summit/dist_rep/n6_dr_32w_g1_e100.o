@@ -1,0 +1,31 @@
+=====================================================
+Thu Mar 21 20:20:48 EDT 2019
+--ps_hosts=a07n18:2220
+--worker_hosts=a07n18:2221,a07n18:2222,a07n18:2223,a07n18:2224,a07n18:2225,a08n01:2226,a08n01:2227,a08n01:2228,a08n01:2229,a08n01:22210,a08n01:22211,a08n02:22212,a08n02:22213,a08n02:22214,a08n02:22215,a08n02:22216,a08n02:22217,a08n03:22218,a08n03:22219,a08n03:22220,a08n03:22221,a08n03:22222,a08n03:22223,a08n04:22224,a08n04:22225,a08n04:22226,a08n04:22227,a08n04:22228,a08n04:22229,a08n05:22230,a08n05:22231,a08n05:22232
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 304313: <n6_dr_32w_g1_e100> in cluster <summit> Exited
+
+Job <n6_dr_32w_g1_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Thu Mar 21 01:56:36 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Thu Mar 21 20:20:37 2019
+                            <42*a07n18>
+                            <42*a08n01>
+                            <42*a08n02>
+                            <42*a08n03>
+                            <42*a08n04>
+                            <42*a08n05>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Thu Mar 21 20:20:37 2019
+Terminated at Thu Mar 21 21:20:52 2019
+Results reported at Thu Mar 21 21:20:52 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n6_dr_32w_g1_e100.e> for stderr output of this job.
+

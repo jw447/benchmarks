@@ -1,0 +1,192 @@
+=====================================================
+Mon Mar 25 02:38:15 EDT 2019
+--ps_hosts=h35n03:2220
+--worker_hosts=h35n03:2221
+Parameter setup time: 0.001
+Benchmark construction time: 1.129
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/job:worker/replica:0/task:0/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 279.7 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 286.9 +/- 3.4 (jitter = 6.2)	7.880
+20	images/sec: 289.8 +/- 2.3 (jitter = 12.8)	7.910
+30	images/sec: 289.5 +/- 2.4 (jitter = 10.6)	7.820
+40	images/sec: 290.8 +/- 1.9 (jitter = 8.8)	8.004
+50	images/sec: 291.0 +/- 1.6 (jitter = 8.7)	7.768
+60	images/sec: 291.5 +/- 1.4 (jitter = 9.2)	8.116
+70	images/sec: 291.0 +/- 1.2 (jitter = 8.9)	7.816
+80	images/sec: 291.1 +/- 1.1 (jitter = 8.8)	7.978
+90	images/sec: 291.3 +/- 1.0 (jitter = 8.2)	8.096
+100	images/sec: 291.6 +/- 0.9 (jitter = 7.8)	8.035
+----------------------------------------------------------------
+total images/sec: 291.49
+----------------------------------------------------------------
+Benchmark run time: 45.966
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 307174: <n1_ps_1w_g1_e100> in cluster <summit> Exited
+
+Job <n1_ps_1w_g1_e100> was submitted from host <login2> by user <jw447> in cluster <summit> at Mon Mar 25 02:38:00 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Mar 25 02:38:12 2019
+                            <42*h35n03>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/ps> was used as the working directory.
+Started at Mon Mar 25 02:38:12 2019
+Terminated at Mon Mar 25 03:08:27 2019
+Results reported at Mon Mar 25 03:08:27 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_ps_1w_g1_e100.e> for stderr output of this job.
+
+=====================================================
+Mon Mar 25 03:09:08 EDT 2019
+--ps_hosts=h35n03:2220
+--worker_hosts=h35n03:2221
+Parameter setup time: 0.001
+Benchmark construction time: 1.212
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/job:worker/replica:0/task:0/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 294.3 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 292.6 +/- 2.8 (jitter = 7.0)	7.880
+20	images/sec: 292.9 +/- 2.0 (jitter = 9.1)	7.910
+30	images/sec: 289.0 +/- 3.9 (jitter = 10.3)	7.821
+40	images/sec: 291.8 +/- 3.1 (jitter = 10.5)	8.003
+50	images/sec: 293.2 +/- 2.5 (jitter = 11.2)	7.768
+60	images/sec: 294.3 +/- 2.2 (jitter = 9.4)	8.114
+70	images/sec: 295.4 +/- 1.9 (jitter = 8.8)	7.814
+80	images/sec: 296.5 +/- 1.7 (jitter = 8.6)	7.980
+90	images/sec: 296.9 +/- 1.5 (jitter = 8.5)	8.095
+100	images/sec: 297.5 +/- 1.4 (jitter = 8.6)	8.032
+----------------------------------------------------------------
+total images/sec: 297.38
+----------------------------------------------------------------
+Benchmark run time: 38.478
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 307175: <n1_ps_1w_g1_e100> in cluster <summit> Exited
+
+Job <n1_ps_1w_g1_e100> was submitted from host <login2> by user <jw447> in cluster <summit> at Mon Mar 25 02:38:10 2019
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Mar 25 03:09:05 2019
+                            <42*h35n03>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/ps> was used as the working directory.
+Started at Mon Mar 25 03:09:05 2019
+Terminated at Mon Mar 25 03:39:14 2019
+Results reported at Mon Mar 25 03:39:14 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_ps_1w_g1_e100.e> for stderr output of this job.
+
+=====================================================
+Mon Mar 25 03:39:59 EDT 2019
+--ps_hosts=h36n15:2220
+--worker_hosts=h36n15:2221
+Parameter setup time: 0.001
+Benchmark construction time: 1.110
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/job:worker/replica:0/task:0/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 289.9 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 287.8 +/- 4.6 (jitter = 12.9)	7.880
+20	images/sec: 288.2 +/- 2.7 (jitter = 10.6)	7.910
+30	images/sec: 287.8 +/- 2.1 (jitter = 10.7)	7.820
+40	images/sec: 288.8 +/- 1.7 (jitter = 9.9)	8.004
+50	images/sec: 289.0 +/- 1.4 (jitter = 8.7)	7.768
+60	images/sec: 289.5 +/- 1.2 (jitter = 8.2)	8.115
+70	images/sec: 289.3 +/- 1.1 (jitter = 6.7)	7.817
+80	images/sec: 289.0 +/- 0.9 (jitter = 6.4)	7.978
+90	images/sec: 289.0 +/- 0.8 (jitter = 5.9)	8.098
+100	images/sec: 289.0 +/- 0.9 (jitter = 6.6)	8.035
+----------------------------------------------------------------
+total images/sec: 288.93
+----------------------------------------------------------------
+Benchmark run time: 44.926
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 307176: <n1_ps_1w_g1_e100> in cluster <summit> Exited
+
+Job <n1_ps_1w_g1_e100> was submitted from host <login2> by user <jw447> in cluster <summit> at Mon Mar 25 02:38:11 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Mar 25 03:39:54 2019
+                            <42*h36n15>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/ps> was used as the working directory.
+Started at Mon Mar 25 03:39:54 2019
+Terminated at Mon Mar 25 04:10:00 2019
+Results reported at Mon Mar 25 04:10:00 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_ps_1w_g1_e100.e> for stderr output of this job.
+

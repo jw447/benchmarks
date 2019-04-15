@@ -1,0 +1,112 @@
+total 0
+=====================================================
+Wed Apr 10 15:28:41 EDT 2019
+Parameter setup time: 5.124
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 409.8 +/- 0.0 (jitter = 0.0)	7.972
+10	images/sec: 409.2 +/- 0.2 (jitter = 0.9)	7.856
+20	images/sec: 409.6 +/- 0.2 (jitter = 1.0)	7.914
+30	images/sec: 409.8 +/- 0.2 (jitter = 1.3)	7.734
+40	images/sec: 409.5 +/- 0.2 (jitter = 0.9)	7.971
+50	images/sec: 409.6 +/- 0.2 (jitter = 1.0)	8.025
+60	images/sec: 409.6 +/- 0.2 (jitter = 0.8)	7.887
+70	images/sec: 409.6 +/- 0.1 (jitter = 0.7)	7.982
+80	images/sec: 409.6 +/- 0.1 (jitter = 0.7)	7.802
+90	images/sec: 409.6 +/- 0.1 (jitter = 0.7)	7.796
+100	images/sec: 409.7 +/- 0.1 (jitter = 0.8)	7.802
+----------------------------------------------------------------
+total images/sec: 409.56
+----------------------------------------------------------------
+Benchmark run time: 55.265
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 334306: <n1_1w_bb> in cluster <summit> Done
+
+Job <n1_1w_bb> was submitted from host <login2> by user <jw447> in cluster <summit> at Wed Apr 10 15:26:43 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Wed Apr 10 15:28:12 2019
+                            <42*h36n16>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/bbuffer> was used as the working directory.
+Started at Wed Apr 10 15:28:12 2019
+Terminated at Wed Apr 10 15:30:04 2019
+Results reported at Wed Apr 10 15:30:04 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_1w_bb.e> for stderr output of this job.
+
+total 0
+=====================================================
+Wed Apr 10 17:47:23 EDT 2019
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 334603: <n1_1w_bb> in cluster <summit> Exited
+
+Job <n1_1w_bb> was submitted from host <login2> by user <jw447> in cluster <summit> at Wed Apr 10 17:46:55 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Wed Apr 10 17:47:10 2019
+                            <42*c25n15>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/bbuffer> was used as the working directory.
+Started at Wed Apr 10 17:47:10 2019
+Terminated at Wed Apr 10 17:47:40 2019
+Results reported at Wed Apr 10 17:47:40 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_1w_bb.e> for stderr output of this job.
+
+total 0
+=====================================================
+Wed Apr 10 17:51:33 EDT 2019
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 334608: <n1_1w_bb> in cluster <summit> Exited
+
+Job <n1_1w_bb> was submitted from host <login2> by user <jw447> in cluster <summit> at Wed Apr 10 17:51:05 2019
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <jw447> in cluster <summit> at Wed Apr 10 17:51:21 2019
+                            <42*c12n16>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/bbuffer> was used as the working directory.
+Started at Wed Apr 10 17:51:21 2019
+Terminated at Wed Apr 10 17:51:34 2019
+Results reported at Wed Apr 10 17:51:34 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_1w_bb.e> for stderr output of this job.
+

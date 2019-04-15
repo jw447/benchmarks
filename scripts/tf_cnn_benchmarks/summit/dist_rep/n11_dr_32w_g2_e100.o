@@ -1,0 +1,36 @@
+=====================================================
+Thu Mar 21 22:15:11 EDT 2019
+--ps_hosts=h33n12:2220
+--worker_hosts=h33n12:2221,h33n12:2222,h33n13:2223,h33n13:2224,h33n14:2225,h33n14:2226,h33n15:2227,h33n15:2228,h33n16:2229,h33n16:22210,h33n17:22211,h33n17:22212,h33n18:22213,h33n18:22214,h34n01:22215,h34n01:22216,h34n02:22217,h34n02:22218,h34n03:22219,h34n03:22220,h34n04:22221,h34n04:22222,h33n12:22223,h33n13:22224,h33n14:22225,h33n15:22226,h33n16:22227,h33n17:22228,h33n18:22229,h34n01:22230,h34n02:22231,h34n03:22232
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 304314: <n11_dr_32w_g2_e100> in cluster <summit> Exited
+
+Job <n11_dr_32w_g2_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Thu Mar 21 01:58:17 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Thu Mar 21 22:14:59 2019
+                            <42*h33n12>
+                            <42*h33n13>
+                            <42*h33n14>
+                            <42*h33n15>
+                            <42*h33n16>
+                            <42*h33n17>
+                            <42*h33n18>
+                            <42*h34n01>
+                            <42*h34n02>
+                            <42*h34n03>
+                            <42*h34n04>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Thu Mar 21 22:14:59 2019
+Terminated at Thu Mar 21 23:15:14 2019
+Results reported at Thu Mar 21 23:15:14 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n11_dr_32w_g2_e100.e> for stderr output of this job.
+

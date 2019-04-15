@@ -1,0 +1,61 @@
+=====================================================
+Wed Apr 10 15:26:06 EDT 2019
+Parameter setup time: 2.437
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 409.7 +/- 0.0 (jitter = 0.0)	7.972
+10	images/sec: 408.9 +/- 0.3 (jitter = 0.5)	7.856
+20	images/sec: 409.0 +/- 0.3 (jitter = 1.0)	7.914
+30	images/sec: 409.3 +/- 0.2 (jitter = 1.4)	7.735
+40	images/sec: 409.2 +/- 0.2 (jitter = 1.3)	7.966
+50	images/sec: 409.3 +/- 0.2 (jitter = 1.4)	8.023
+60	images/sec: 409.4 +/- 0.2 (jitter = 1.4)	7.900
+70	images/sec: 409.4 +/- 0.2 (jitter = 1.4)	7.991
+80	images/sec: 409.5 +/- 0.1 (jitter = 1.4)	7.813
+90	images/sec: 409.4 +/- 0.2 (jitter = 1.4)	7.793
+100	images/sec: 409.4 +/- 0.2 (jitter = 1.4)	7.817
+----------------------------------------------------------------
+total images/sec: 409.27
+----------------------------------------------------------------
+Benchmark run time: 56.220
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 334304: <n1_1w_fs> in cluster <summit> Done
+
+Job <n1_1w_fs> was submitted from host <login2> by user <jw447> in cluster <summit> at Wed Apr 10 15:25:43 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Wed Apr 10 15:26:00 2019
+                            <42*a30n18>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/bbuffer> was used as the working directory.
+Started at Wed Apr 10 15:26:00 2019
+Terminated at Wed Apr 10 15:27:38 2019
+Results reported at Wed Apr 10 15:27:38 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_1w_fs.e> for stderr output of this job.
+

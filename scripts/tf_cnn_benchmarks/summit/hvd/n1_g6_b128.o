@@ -1,0 +1,24 @@
+=====================================================
+Mon Apr  8 12:27:02 EDT 2019
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 329128: <n1_g6_b128> in cluster <summit> Exited
+
+Job <n1_g6_b128> was submitted from host <login1> by user <jw447> in cluster <summit> at Mon Apr  8 12:02:33 2019
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr  8 12:26:59 2019
+                            <42*h36n15>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Mon Apr  8 12:26:59 2019
+Terminated at Mon Apr  8 12:27:03 2019
+Results reported at Mon Apr  8 12:27:03 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g6_b128.e> for stderr output of this job.
+

@@ -1,0 +1,62 @@
+=====================================================
+Mon Apr  8 11:52:50 EDT 2019
+Parameter setup time: 7.745
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet
+Mode:        training
+SingleSess:  False
+Batch size:  768 global
+             128 per device
+Num batches: 100
+Num epochs:  0.06
+Devices:     ['/gpu:0', '/gpu:1', '/gpu:2', '/gpu:3', '/gpu:4', '/gpu:5']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   momentum
+Variables:   replicated
+AllReduce:   nccl
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	base_loss
+1	images/sec: 761.5 +/- 0.0 (jitter = 0.0)	7.253
+10	images/sec: 588.2 +/- 59.5 (jitter = 194.0)	7.203
+20	images/sec: 498.6 +/- 44.2 (jitter = 254.2)	7.149
+30	images/sec: 492.8 +/- 31.2 (jitter = 197.2)	7.069
+40	images/sec: 504.9 +/- 23.4 (jitter = 88.4)	6.985
+50	images/sec: 511.5 +/- 18.7 (jitter = 18.5)	6.959
+60	images/sec: 516.4 +/- 15.6 (jitter = 15.4)	6.926
+70	images/sec: 520.2 +/- 13.4 (jitter = 15.5)	6.922
+80	images/sec: 522.7 +/- 11.7 (jitter = 16.8)	6.927
+90	images/sec: 525.3 +/- 10.4 (jitter = 15.6)	6.915
+100	images/sec: 527.2 +/- 9.4 (jitter = 16.0)	6.876
+----------------------------------------------------------------
+total images/sec: 527.19
+----------------------------------------------------------------
+Benchmark run time: 390.234
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 329114: <n1_g6_b128_d> in cluster <summit> Done
+
+Job <n1_g6_b128_d> was submitted from host <login1> by user <jw447> in cluster <summit> at Mon Apr  8 11:52:23 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr  8 11:52:45 2019
+                            <42*h36n15>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/rep> was used as the working directory.
+Started at Mon Apr  8 11:52:45 2019
+Terminated at Mon Apr  8 11:59:41 2019
+Results reported at Mon Apr  8 11:59:41 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g6_b128_d.e> for stderr output of this job.
+

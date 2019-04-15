@@ -1,0 +1,403 @@
+=====================================================
+Fri Mar 22 14:11:52 EDT 2019
+--ps_hosts=d35n02:2220
+--worker_hosts=d35n02:2221,d35n03:2222,d35n04:2223,d35n05:2224,d35n06:2225,d35n07:2226,d35n08:2227,d35n09:2228
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 305615: <n8_dr_8w_g1_e100> in cluster <summit> Exited
+
+Job <n8_dr_8w_g1_e100> was submitted from host <login2> by user <jw447> in cluster <summit> at Fri Mar 22 13:56:00 2019
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <jw447> in cluster <summit> at Fri Mar 22 14:11:39 2019
+                            <42*d35n02>
+                            <42*d35n03>
+                            <42*d35n04>
+                            <42*d35n05>
+                            <42*d35n06>
+                            <42*d35n07>
+                            <42*d35n08>
+                            <42*d35n09>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Fri Mar 22 14:11:39 2019
+Terminated at Fri Mar 22 14:22:06 2019
+Results reported at Fri Mar 22 14:22:06 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n8_dr_8w_g1_e100.e> for stderr output of this job.
+
+=====================================================
+Fri Mar 22 14:27:03 EDT 2019
+--ps_hosts=a08n03:2220
+--worker_hosts=a08n03:2221,a08n04:2222,a08n05:2223,a08n06:2224,a08n07:2225,a08n08:2226,a08n09:2227,a08n10:2228
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 305660: <n8_dr_8w_g1_e100> in cluster <summit> Exited
+
+Job <n8_dr_8w_g1_e100> was submitted from host <login2> by user <jw447> in cluster <summit> at Fri Mar 22 14:25:41 2019
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <jw447> in cluster <summit> at Fri Mar 22 14:26:56 2019
+                            <42*a08n03>
+                            <42*a08n04>
+                            <42*a08n05>
+                            <42*a08n06>
+                            <42*a08n07>
+                            <42*a08n08>
+                            <42*a08n09>
+                            <42*a08n10>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Fri Mar 22 14:26:56 2019
+Terminated at Fri Mar 22 14:37:21 2019
+Results reported at Fri Mar 22 14:37:21 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n8_dr_8w_g1_e100.e> for stderr output of this job.
+
+=====================================================
+Fri Mar 22 14:39:50 EDT 2019
+--ps_hosts=a01n04:2220
+--worker_hosts=a01n04:2221,a01n17:2222,a03n13:2223,b13n18:2224,b14n01:2225,b14n02:2226,b14n03:2227,b14n04:2228
+Parameter setup time: 0.001
+Benchmark construction time: 1.244
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             64 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['/job:worker/replica:0/task:5/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 6.6 +/- 0.0 (jitter = 0.0)	8.199
+10	images/sec: 7.0 +/- 0.1 (jitter = 0.3)	7.879
+20	images/sec: 7.2 +/- 0.1 (jitter = 0.6)	7.855
+30	images/sec: 7.0 +/- 0.1 (jitter = 0.6)	7.797
+40	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.952
+50	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.732
+60	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.948
+70	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.717
+80	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.802
+90	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.928
+100	images/sec: 7.1 +/- 0.1 (jitter = 0.5)	7.854
+----------------------------------------------------------------
+total images/sec: 56.40
+----------------------------------------------------------------
+Benchmark run time: 1056.123
+Parameter setup time: 0.001
+Benchmark construction time: 1.230
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             64 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['/job:worker/replica:0/task:4/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 6.6 +/- 0.0 (jitter = 0.0)	8.199
+10	images/sec: 7.0 +/- 0.1 (jitter = 0.3)	7.879
+20	images/sec: 7.2 +/- 0.1 (jitter = 0.6)	7.855
+30	images/sec: 7.0 +/- 0.1 (jitter = 0.6)	7.797
+40	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.952
+50	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.732
+60	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.948
+70	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.717
+80	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.802
+90	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.928
+100	images/sec: 7.1 +/- 0.1 (jitter = 0.5)	7.854
+----------------------------------------------------------------
+total images/sec: 56.40
+----------------------------------------------------------------
+Benchmark run time: 1056.168
+Parameter setup time: 0.001
+Benchmark construction time: 1.170
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             64 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['/job:worker/replica:0/task:6/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 6.6 +/- 0.0 (jitter = 0.0)	8.199
+10	images/sec: 7.0 +/- 0.1 (jitter = 0.3)	7.879
+20	images/sec: 7.2 +/- 0.1 (jitter = 0.6)	7.855
+30	images/sec: 7.0 +/- 0.1 (jitter = 0.6)	7.797
+40	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.952
+50	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.732
+60	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.948
+70	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.717
+80	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.802
+90	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.928
+100	images/sec: 7.1 +/- 0.1 (jitter = 0.5)	7.854
+----------------------------------------------------------------
+total images/sec: 56.40
+----------------------------------------------------------------
+Benchmark run time: 1055.915
+Parameter setup time: 0.001
+Benchmark construction time: 1.202
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             64 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['/job:worker/replica:0/task:7/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 6.6 +/- 0.0 (jitter = 0.0)	8.199
+10	images/sec: 7.0 +/- 0.1 (jitter = 0.3)	7.879
+20	images/sec: 7.2 +/- 0.1 (jitter = 0.6)	7.855
+30	images/sec: 7.0 +/- 0.1 (jitter = 0.6)	7.797
+40	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.952
+50	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.732
+60	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.948
+70	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.717
+80	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.802
+90	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.928
+100	images/sec: 7.1 +/- 0.1 (jitter = 0.5)	7.854
+----------------------------------------------------------------
+total images/sec: 56.40
+----------------------------------------------------------------
+Benchmark run time: 1054.478
+Parameter setup time: 0.001
+Benchmark construction time: 1.107
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             64 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['/job:worker/replica:0/task:1/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 6.6 +/- 0.0 (jitter = 0.0)	8.199
+10	images/sec: 7.0 +/- 0.1 (jitter = 0.3)	7.879
+20	images/sec: 7.2 +/- 0.1 (jitter = 0.6)	7.855
+30	images/sec: 7.0 +/- 0.1 (jitter = 0.6)	7.797
+40	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.952
+50	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.732
+60	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.948
+70	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.717
+80	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.802
+90	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.928
+100	images/sec: 7.1 +/- 0.1 (jitter = 0.5)	7.854
+----------------------------------------------------------------
+total images/sec: 56.40
+----------------------------------------------------------------
+Benchmark run time: 1061.847
+Parameter setup time: 0.001
+Benchmark construction time: 1.236
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             64 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['/job:worker/replica:0/task:0/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 6.6 +/- 0.0 (jitter = 0.0)	8.199
+10	images/sec: 7.0 +/- 0.1 (jitter = 0.3)	7.879
+20	images/sec: 7.2 +/- 0.1 (jitter = 0.6)	7.855
+30	images/sec: 7.0 +/- 0.1 (jitter = 0.6)	7.797
+40	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.952
+50	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.732
+60	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.948
+70	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.717
+80	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.802
+90	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.928
+100	images/sec: 7.1 +/- 0.1 (jitter = 0.5)	7.854
+----------------------------------------------------------------
+total images/sec: 56.40
+----------------------------------------------------------------
+Benchmark run time: 1062.036
+Parameter setup time: 0.001
+Benchmark construction time: 1.159
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             64 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['/job:worker/replica:0/task:3/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 6.6 +/- 0.0 (jitter = 0.0)	8.199
+10	images/sec: 7.0 +/- 0.1 (jitter = 0.3)	7.879
+20	images/sec: 7.2 +/- 0.1 (jitter = 0.6)	7.855
+30	images/sec: 7.0 +/- 0.1 (jitter = 0.6)	7.797
+40	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.952
+50	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.732
+60	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.948
+70	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.717
+80	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.802
+90	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.928
+100	images/sec: 7.1 +/- 0.1 (jitter = 0.5)	7.854
+----------------------------------------------------------------
+total images/sec: 56.40
+----------------------------------------------------------------
+Benchmark run time: 1054.639
+Parameter setup time: 0.001
+Benchmark construction time: 1.239
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             64 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['/job:worker/replica:0/task:2/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   distributed_replicated
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 6.6 +/- 0.0 (jitter = 0.0)	8.199
+10	images/sec: 7.0 +/- 0.1 (jitter = 0.3)	7.879
+20	images/sec: 7.2 +/- 0.1 (jitter = 0.6)	7.855
+30	images/sec: 7.0 +/- 0.1 (jitter = 0.6)	7.797
+40	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.952
+50	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.732
+60	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.948
+70	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.717
+80	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.802
+90	images/sec: 7.0 +/- 0.1 (jitter = 0.5)	7.928
+100	images/sec: 7.1 +/- 0.1 (jitter = 0.5)	7.854
+----------------------------------------------------------------
+total images/sec: 56.40
+----------------------------------------------------------------
+Benchmark run time: 1056.395
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 305679: <n8_dr_8w_g1_e100> in cluster <summit> Exited
+
+Job <n8_dr_8w_g1_e100> was submitted from host <login2> by user <jw447> in cluster <summit> at Fri Mar 22 14:39:40 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Fri Mar 22 14:39:42 2019
+                            <42*a01n04>
+                            <42*a01n17>
+                            <42*a03n13>
+                            <42*b13n18>
+                            <42*b14n01>
+                            <42*b14n02>
+                            <42*b14n03>
+                            <42*b14n04>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Fri Mar 22 14:39:42 2019
+Terminated at Fri Mar 22 14:59:59 2019
+Results reported at Fri Mar 22 14:59:59 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n8_dr_8w_g1_e100.e> for stderr output of this job.
+

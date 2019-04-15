@@ -1,0 +1,45 @@
+=====================================================
+Mon Apr  8 11:43:48 EDT 2019
+Parameter setup time: 7.901
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  1536 global
+             256 per device
+Num batches: 100
+Num epochs:  0.12
+Devices:     ['/gpu:0', '/gpu:1', '/gpu:2', '/gpu:3', '/gpu:4', '/gpu:5']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   momentum
+Variables:   replicated
+AllReduce:   nccl
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 329096: <n1_g6_b256> in cluster <summit> Exited
+
+Job <n1_g6_b256> was submitted from host <login1> by user <jw447> in cluster <summit> at Mon Apr  8 11:41:19 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Mon Apr  8 11:43:46 2019
+                            <42*h36n16>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/rep> was used as the working directory.
+Started at Mon Apr  8 11:43:46 2019
+Terminated at Mon Apr  8 11:47:41 2019
+Results reported at Mon Apr  8 11:47:41 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_g6_b256.e> for stderr output of this job.
+

@@ -1,0 +1,168 @@
+=====================================================
+Sun Mar 24 10:56:24 EDT 2019
+--ps_host=h35n05:2220
+--worker_hosts=h35n05:2221
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 306815: <n1_ps_1w_g6_e100> in cluster <summit> Done
+
+Job <n1_ps_1w_g6_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Sun Mar 24 10:55:35 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Sun Mar 24 10:56:20 2019
+                            <42*h35n05>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/ps> was used as the working directory.
+Started at Sun Mar 24 10:56:20 2019
+Terminated at Sun Mar 24 10:56:27 2019
+Results reported at Sun Mar 24 10:56:27 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_ps_1w_g6_e100.e> for stderr output of this job.
+
+=====================================================
+Sun Mar 24 10:58:41 EDT 2019
+--ps_host=g31n12:2220
+--worker_hosts=g31n12:2221
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 306819: <n1_ps_1w_g6_e100> in cluster <summit> Done
+
+Job <n1_ps_1w_g6_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Sun Mar 24 10:58:31 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Sun Mar 24 10:58:38 2019
+                            <42*g31n12>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/ps> was used as the working directory.
+Started at Sun Mar 24 10:58:38 2019
+Terminated at Sun Mar 24 10:58:56 2019
+Results reported at Sun Mar 24 10:58:56 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_ps_1w_g6_e100.e> for stderr output of this job.
+
+=====================================================
+Sun Mar 24 10:59:40 EDT 2019
+--ps_hosts=g31n12:2220
+--worker_hosts=g31n12:2221
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 306820: <n1_ps_1w_g6_e100> in cluster <summit> Done
+
+Job <n1_ps_1w_g6_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Sun Mar 24 10:59:31 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Sun Mar 24 10:59:37 2019
+                            <42*g31n12>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/ps> was used as the working directory.
+Started at Sun Mar 24 10:59:37 2019
+Terminated at Sun Mar 24 10:59:48 2019
+Results reported at Sun Mar 24 10:59:48 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_ps_1w_g6_e100.e> for stderr output of this job.
+
+=====================================================
+Sun Mar 24 11:02:14 EDT 2019
+--ps_hosts=g31n12:2220
+--worker_hosts=g31n12:2221
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 306821: <n1_ps_1w_g6_e100> in cluster <summit> Done
+
+Job <n1_ps_1w_g6_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Sun Mar 24 11:02:03 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Sun Mar 24 11:02:11 2019
+                            <42*g31n12>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/ps> was used as the working directory.
+Started at Sun Mar 24 11:02:11 2019
+Terminated at Sun Mar 24 11:02:21 2019
+Results reported at Sun Mar 24 11:02:21 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_ps_1w_g6_e100.e> for stderr output of this job.
+
+=====================================================
+Sun Mar 24 11:04:26 EDT 2019
+--ps_hosts=g31n16:2220
+--worker_hosts=g31n16:2221
+Parameter setup time: 0.001
+Benchmark construction time: 7.901
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  384 global
+             64 per device
+Num batches: 100
+Num epochs:  0.03
+Devices:     ['/job:worker/replica:0/task:0/gpu:0', '/job:worker/replica:0/task:0/gpu:1', '/job:worker/replica:0/task:0/gpu:2', '/job:worker/replica:0/task:0/gpu:3', '/job:worker/replica:0/task:0/gpu:4', '/job:worker/replica:0/task:0/gpu:5']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+Sync:        True
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 1032.1 +/- 0.0 (jitter = 0.0)	7.941
+10	images/sec: 800.8 +/- 61.5 (jitter = 71.2)	7.890
+20	images/sec: 892.9 +/- 34.4 (jitter = 61.3)	7.833
+30	images/sec: 917.4 +/- 24.2 (jitter = 64.0)	7.866
+40	images/sec: 922.1 +/- 19.7 (jitter = 68.0)	7.846
+50	images/sec: 938.0 +/- 16.2 (jitter = 53.7)	7.781
+60	images/sec: 947.5 +/- 13.8 (jitter = 53.9)	7.867
+70	images/sec: 949.7 +/- 12.0 (jitter = 56.9)	7.753
+80	images/sec: 895.8 +/- 15.4 (jitter = 59.4)	7.785
+90	images/sec: 892.5 +/- 15.1 (jitter = 63.0)	7.787
+100	images/sec: 899.8 +/- 14.1 (jitter = 63.0)	7.807
+----------------------------------------------------------------
+total images/sec: 899.61
+----------------------------------------------------------------
+Benchmark run time: 98.547
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 306823: <n1_ps_1w_g6_e100> in cluster <summit> Exited
+
+Job <n1_ps_1w_g6_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Sun Mar 24 11:04:14 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Sun Mar 24 11:04:22 2019
+                            <42*g31n16>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/ps> was used as the working directory.
+Started at Sun Mar 24 11:04:22 2019
+Terminated at Sun Mar 24 11:34:31 2019
+Results reported at Sun Mar 24 11:34:31 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_ps_1w_g6_e100.e> for stderr output of this job.
+

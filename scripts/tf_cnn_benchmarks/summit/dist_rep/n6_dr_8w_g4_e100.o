@@ -1,0 +1,31 @@
+=====================================================
+Thu Mar 21 15:15:17 EDT 2019
+--ps_hosts=a30n05:2220
+--worker_hosts=a30n05:2221,a30n06:2222,a30n07:2223,a30n08:2224,a30n09:2225,a30n10:2226,:2227,:2228
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 304300: <n6_dr_8w_g4_e100> in cluster <summit> Exited
+
+Job <n6_dr_8w_g4_e100> was submitted from host <login1> by user <jw447> in cluster <summit> at Thu Mar 21 01:51:17 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Thu Mar 21 15:15:10 2019
+                            <42*a30n05>
+                            <42*a30n06>
+                            <42*a30n07>
+                            <42*a30n08>
+                            <42*a30n09>
+                            <42*a30n10>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Thu Mar 21 15:15:10 2019
+Terminated at Thu Mar 21 15:45:25 2019
+Results reported at Thu Mar 21 15:45:25 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n6_dr_8w_g4_e100.e> for stderr output of this job.
+

@@ -1,0 +1,771 @@
+=====================================================
+Thu Mar 21 00:20:38 EDT 2019
+--worker_hosts=h36n12:2221
+Parameter setup time: 1.438
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 380.3 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 381.0 +/- 0.5 (jitter = 1.7)	7.880
+20	images/sec: 381.3 +/- 0.4 (jitter = 2.3)	7.910
+30	images/sec: 381.5 +/- 0.4 (jitter = 2.9)	7.820
+40	images/sec: 381.5 +/- 0.3 (jitter = 2.5)	8.004
+50	images/sec: 381.6 +/- 0.3 (jitter = 2.8)	7.769
+60	images/sec: 381.5 +/- 0.3 (jitter = 2.9)	8.115
+70	images/sec: 381.5 +/- 0.3 (jitter = 2.7)	7.814
+80	images/sec: 381.5 +/- 0.2 (jitter = 2.9)	7.978
+90	images/sec: 381.5 +/- 0.2 (jitter = 3.0)	8.097
+100	images/sec: 381.5 +/- 0.2 (jitter = 2.9)	8.037
+----------------------------------------------------------------
+total images/sec: 381.33
+----------------------------------------------------------------
+Benchmark run time: 37.935
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 304236: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Done
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login2> by user <jw447> in cluster <summit> at Thu Mar 21 00:20:26 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Thu Mar 21 00:20:34 2019
+                            <42*h36n12>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/run_summit> was used as the working directory.
+Started at Thu Mar 21 00:20:34 2019
+Terminated at Thu Mar 21 00:21:24 2019
+Results reported at Thu Mar 21 00:21:24 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Sun Mar 24 10:45:11 EDT 2019
+--worker_hosts=h35n06:2221
+Parameter setup time: 2.071
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 378.4 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 380.7 +/- 0.6 (jitter = 2.3)	7.880
+20	images/sec: 381.0 +/- 0.4 (jitter = 1.8)	7.910
+30	images/sec: 380.9 +/- 0.3 (jitter = 2.1)	7.821
+40	images/sec: 381.0 +/- 0.3 (jitter = 1.9)	8.004
+50	images/sec: 380.9 +/- 0.3 (jitter = 2.3)	7.768
+60	images/sec: 380.8 +/- 0.3 (jitter = 2.3)	8.114
+70	images/sec: 380.7 +/- 0.2 (jitter = 2.4)	7.818
+80	images/sec: 380.8 +/- 0.2 (jitter = 2.3)	7.973
+90	images/sec: 380.7 +/- 0.2 (jitter = 2.4)	8.097
+100	images/sec: 380.8 +/- 0.2 (jitter = 2.4)	8.037
+----------------------------------------------------------------
+total images/sec: 380.65
+----------------------------------------------------------------
+Benchmark run time: 43.767
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 306805: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Done
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Sun Mar 24 10:44:56 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Sun Mar 24 10:45:06 2019
+                            <42*h35n06>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Sun Mar 24 10:45:06 2019
+Terminated at Sun Mar 24 10:46:26 2019
+Results reported at Sun Mar 24 10:46:26 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:34:59 EDT 2019
+Parameter setup time: 2.554
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             512 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 317529: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:34:44 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:34:53 2019
+                            <42*a11n12>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:34:53 2019
+Terminated at Tue Apr  2 00:36:07 2019
+Results reported at Tue Apr  2 00:36:07 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:36:32 EDT 2019
+Parameter setup time: 1.274
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 317540: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:35:32 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:36:29 2019
+                            <42*a11n12>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:36:29 2019
+Terminated at Tue Apr  2 00:36:55 2019
+Results reported at Tue Apr  2 00:36:55 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:37:21 EDT 2019
+Parameter setup time: 1.253
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  256 global
+             256 per device
+Num batches: 100
+Num epochs:  0.02
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 317530: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:35:07 2019
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:37:17 2019
+                            <42*a11n12>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:37:17 2019
+Terminated at Tue Apr  2 00:37:45 2019
+Results reported at Tue Apr  2 00:37:45 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:38:14 EDT 2019
+Parameter setup time: 1.490
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 317532: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:35:18 2019
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:38:09 2019
+                            <42*a04n13>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:38:09 2019
+Terminated at Tue Apr  2 00:38:54 2019
+Results reported at Tue Apr  2 00:38:54 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:39:20 EDT 2019
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 317544: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:35:43 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:39:16 2019
+                            <42*a04n13>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:39:16 2019
+Terminated at Tue Apr  2 00:39:24 2019
+Results reported at Tue Apr  2 00:39:24 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:40:20 EDT 2019
+Parameter setup time: 1.462
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 341.8 +/- 0.0 (jitter = 0.0)	8.169
+10	images/sec: 334.3 +/- 1.4 (jitter = 4.4)	7.593
+20	images/sec: 329.6 +/- 3.5 (jitter = 3.6)	7.696
+30	images/sec: 331.0 +/- 2.4 (jitter = 2.7)	7.753
+40	images/sec: 331.4 +/- 1.9 (jitter = 3.3)	8.007
+50	images/sec: 332.0 +/- 1.5 (jitter = 3.7)	7.520
+60	images/sec: 331.9 +/- 1.3 (jitter = 3.0)	7.988
+70	images/sec: 332.3 +/- 1.1 (jitter = 3.3)	8.027
+80	images/sec: 332.7 +/- 1.0 (jitter = 3.4)	7.931
+90	images/sec: 332.3 +/- 0.9 (jitter = 3.3)	7.851
+100	images/sec: 332.2 +/- 0.8 (jitter = 3.2)	7.797
+----------------------------------------------------------------
+total images/sec: 331.95
+----------------------------------------------------------------
+Benchmark run time: 28.134
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 317562: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Done
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:40:03 2019
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:40:13 2019
+                            <42*h29n05>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:40:13 2019
+Terminated at Tue Apr  2 00:41:04 2019
+Results reported at Tue Apr  2 00:41:04 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:42:22 EDT 2019
+Parameter setup time: 1.460
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 378.6 +/- 0.0 (jitter = 0.0)	8.220
+10	images/sec: 381.0 +/- 0.6 (jitter = 2.3)	7.880
+20	images/sec: 380.4 +/- 0.5 (jitter = 2.5)	7.910
+30	images/sec: 380.4 +/- 0.4 (jitter = 2.6)	7.821
+40	images/sec: 380.5 +/- 0.3 (jitter = 2.8)	8.005
+50	images/sec: 380.4 +/- 0.3 (jitter = 2.6)	7.768
+60	images/sec: 380.5 +/- 0.3 (jitter = 2.7)	8.115
+70	images/sec: 380.6 +/- 0.3 (jitter = 2.6)	7.815
+80	images/sec: 380.6 +/- 0.2 (jitter = 2.6)	7.981
+90	images/sec: 380.7 +/- 0.2 (jitter = 2.6)	8.097
+100	images/sec: 380.7 +/- 0.2 (jitter = 2.6)	8.036
+----------------------------------------------------------------
+total images/sec: 380.49
+----------------------------------------------------------------
+Benchmark run time: 35.915
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 317574: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Done
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:41:56 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:42:13 2019
+                            <42*a20n01>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:42:13 2019
+Terminated at Tue Apr  2 00:43:17 2019
+Results reported at Tue Apr  2 00:43:17 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:43:45 EDT 2019
+Parameter setup time: 1.267
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 410.2 +/- 0.0 (jitter = 0.0)	7.972
+10	images/sec: 409.6 +/- 0.4 (jitter = 1.0)	7.856
+20	images/sec: 409.9 +/- 0.3 (jitter = 1.3)	7.914
+30	images/sec: 410.1 +/- 0.2 (jitter = 1.4)	7.736
+40	images/sec: 410.0 +/- 0.2 (jitter = 1.1)	7.968
+50	images/sec: 410.0 +/- 0.2 (jitter = 1.2)	8.026
+60	images/sec: 410.1 +/- 0.1 (jitter = 1.2)	7.894
+70	images/sec: 410.1 +/- 0.1 (jitter = 1.3)	7.987
+80	images/sec: 410.1 +/- 0.1 (jitter = 1.2)	7.812
+90	images/sec: 410.1 +/- 0.1 (jitter = 1.1)	7.793
+100	images/sec: 410.1 +/- 0.1 (jitter = 1.1)	7.807
+----------------------------------------------------------------
+total images/sec: 409.97
+----------------------------------------------------------------
+Benchmark run time: 50.223
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 317575: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Done
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:42:06 2019
+Job was executed on host(s) <1*batch5>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:43:41 2019
+                            <42*a20n01>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:43:41 2019
+Terminated at Tue Apr  2 00:44:42 2019
+Results reported at Tue Apr  2 00:44:42 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:46:30 EDT 2019
+Parameter setup time: 1.473
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  256 global
+             256 per device
+Num batches: 100
+Num epochs:  0.02
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 317590: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:46:17 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:46:25 2019
+                            <42*b08n07>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:46:25 2019
+Terminated at Tue Apr  2 00:47:21 2019
+Results reported at Tue Apr  2 00:47:21 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:47:45 EDT 2019
+Parameter setup time: 4.847
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             512 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 317591: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:46:35 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:47:41 2019
+                            <42*b08n06>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:47:41 2019
+Terminated at Tue Apr  2 00:48:35 2019
+Results reported at Tue Apr  2 00:48:35 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:49:02 EDT 2019
+Parameter setup time: 1.463
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  1024 global
+             1024 per device
+Num batches: 100
+Num epochs:  0.08
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 317592: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:46:46 2019
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:48:56 2019
+                            <42*b13n04>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:48:56 2019
+Terminated at Tue Apr  2 00:49:55 2019
+Results reported at Tue Apr  2 00:49:55 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:53:20 EDT 2019
+Parameter setup time: 1.462
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             512 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 317603: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:53:03 2019
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:53:15 2019
+                            <42*b20n06>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:53:15 2019
+Terminated at Tue Apr  2 00:54:07 2019
+Results reported at Tue Apr  2 00:54:07 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 00:57:00 EDT 2019
+Parameter setup time: 1.569
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  512 global
+             512 per device
+Num batches: 100
+Num epochs:  0.04
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 317605: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 00:56:38 2019
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 00:56:56 2019
+                            <42*a04n14>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 00:56:56 2019
+Terminated at Tue Apr  2 00:57:44 2019
+Results reported at Tue Apr  2 00:57:44 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
+=====================================================
+Tue Apr  2 01:03:33 EDT 2019
+Parameter setup time: 1.472
+Benchmark construction time: 0.000
+TensorFlow:  1.13
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  256 global
+             256 per device
+Num batches: 100
+Num epochs:  0.02
+Devices:     ['horovod/gpu:0']
+NUMA bind:   False
+Data format: NCHW
+Optimizer:   sgd
+Variables:   horovod
+==========
+Generating training model
+Initializing graph
+Running warm up
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 317612: <n1_hvd_1w_g1_e100_syn> in cluster <summit> Exited
+
+Job <n1_hvd_1w_g1_e100_syn> was submitted from host <login1> by user <jw447> in cluster <summit> at Tue Apr  2 01:03:10 2019
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <jw447> in cluster <summit> at Tue Apr  2 01:03:29 2019
+                            <42*a01n01>
+</ccs/home/jw447> was used as the home directory.
+</gpfs/alpine/proj-shared/csc143/jwang/benchmarks/scripts/tf_cnn_benchmarks/summit/hvd> was used as the working directory.
+Started at Tue Apr  2 01:03:29 2019
+Terminated at Tue Apr  2 01:04:14 2019
+Results reported at Tue Apr  2 01:04:14 2019
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n1_hvd_1w_g1_e100_syn.e> for stderr output of this job.
+
