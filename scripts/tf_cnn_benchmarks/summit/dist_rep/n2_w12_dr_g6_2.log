@@ -1,0 +1,253 @@
+Error: Requested to assign job step a label k1 that already exists
+Error: Requested to assign job step a label k2 that already exists
+Error: Requested to assign job step a label k0 that already exists
+2019-03-18 01:58:44.991343: E tensorflow/stream_executor/cuda/cuda_driver.cc:300] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2019-03-18 01:58:44.991400: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:161] retrieving CUDA diagnostic information for host: a01n05
+2019-03-18 01:58:44.991415: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:168] hostname: a01n05
+2019-03-18 01:58:44.991459: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:192] libcuda reported version is: 396.64.0
+2019-03-18 01:58:44.991532: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:196] kernel reported version is: 396.64.0
+2019-03-18 01:58:44.991548: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:303] kernel version seems to match DSO: 396.64.0
+2019-03-18 01:58:44.998255: W tensorflow/core/platform/profile_utils/cpu_utils.cc:98] Failed to find bogomips in /proc/cpuinfo; cannot determine CPU frequency
+2019-03-18 01:58:44.998544: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x1375a0760 executing computations on platform Host. Devices:
+2019-03-18 01:58:44.998566: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+E0318 01:58:44.999659532   36727 server_chttp2.cc:40]        {"created":"@1552888724.999577546","description":"No address added out of total 1 resolved","file":"external/grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc","file_line":349,"referenced_errors":[{"created":"@1552888724.999574874","description":"Failed to add any wildcard listeners","file":"external/grpc/src/core/lib/iomgr/tcp_server_posix.cc","file_line":324,"referenced_errors":[{"created":"@1552888724.999560435","description":"Unable to configure socket","fd":7,"file":"external/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc","file_line":217,"referenced_errors":[{"created":"@1552888724.999553974","description":"OS Error","errno":98,"file":"external/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc","file_line":190,"os_error":"Address already in use","syscall":"bind"}]},{"created":"@1552888724.999574343","description":"Unable to configure socket","fd":7,"file":"external/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc","file_line":217,"referenced_errors":[{"created":"@1552888724.999569675","description":"OS Error","errno":98,"file":"external/grpc/src/core/lib/iomgr/tcp_server_utils_posix_common.cc","file_line":190,"os_error":"Address already in use","syscall":"bind"}]}]}]}
+2019-03-18 01:58:44.999717: E tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:466] Unknown: Could not start gRPC server
+Params(model='resnet50', eval=False, eval_interval_secs=0, eval_during_training_every_n_steps=None, eval_during_training_every_n_epochs=None, eval_during_training_at_specified_steps=[], eval_during_training_at_specified_epochs=[], forward_only=False, freeze_when_forward_only=False, print_training_accuracy=False, batch_size=0, eval_batch_size=0, batch_group_size=1, num_batches=None, num_eval_batches=None, num_epochs=None, num_eval_epochs=None, stop_at_top_1_accuracy=None, collect_eval_results_async=False, num_warmup_batches=None, autotune_threshold=None, num_gpus=1, gpu_indices='', display_every=10, display_perf_ewma=None, data_dir=None, data_name=None, resize_method='bilinear', distortions=True, use_datasets=True, input_preprocessor='default', gpu_thread_mode='gpu_private', per_gpu_thread_count=0, hierarchical_copy=False, network_topology=<NetworkTopology.DGX1: 'dgx1'>, gradient_repacking=0, compact_gradient_transfer=True, variable_consistency='strong', datasets_repeat_cached_sample=False, local_parameter_device='CPU', device='CPU', data_format='NCHW', num_intra_threads=None, num_inter_threads=0, use_numa_affinity=False, trace_file='', use_chrome_trace_format=True, tfprof_file=None, graph_file=None, partitioned_graph_file_prefix=None, optimizer='sgd', init_learning_rate=None, piecewise_learning_rate_schedule=None, num_epochs_per_decay=0.0, learning_rate_decay_factor=0.0, num_learning_rate_warmup_epochs=0.0, minimum_learning_rate=0.0, resnet_base_lr=None, momentum=0.9, rmsprop_decay=0.9, rmsprop_momentum=0.9, rmsprop_epsilon=1.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, gradient_clip=None, weight_decay=4e-05, gpu_memory_frac_for_testing=0.0, use_unified_memory=None, use_tf_layers=True, tf_random_seed=1234, debugger=None, use_python32_barrier=False, ml_perf=False, datasets_use_prefetch=True, datasets_prefetch_buffer_size=1, datasets_num_private_threads=None, datasets_use_caching=False, datasets_parallel_interleave_cycle_length=None, datasets_sloppy_parallel_interleave=False, datasets_parallel_interleave_prefetch=None, multi_device_iterator_max_buffer_size=1, winograd_nonfused=True, batchnorm_persistent=True, sync_on_finish=False, staged_vars=False, force_gpu_compatible=False, allow_growth=None, xla=False, xla_compile=False, fuse_decode_and_crop=True, distort_color_in_yiq=True, enable_optimizations=True, rewriter_config=None, loss_type_to_report='total_loss', single_l2_loss_op=False, use_resource_vars=False, compute_lr_on_cpu=False, sparse_to_dense_grads=False, mkl=False, kmp_blocktime=0, kmp_affinity='granularity=fine,verbose,compact,1,0', kmp_settings=1, use_fp16=False, fp16_loss_scale=None, fp16_vars=False, fp16_enable_auto_loss_scale=False, fp16_inc_loss_scale_every_n=1000, variable_update='distributed_replicated', all_reduce_spec=None, agg_small_grads_max_bytes=0, agg_small_grads_max_group=10, allreduce_merge_scope=1, job_name='ps', ps_hosts='a01n05:2221', worker_hosts='a01n05:2222,a01n06:2222', controller_host=None, task_index=0, server_protocol='grpc', cross_replica_sync=True, horovod_device='', summary_verbosity=0, save_summaries_steps=0, save_model_secs=0, save_model_steps=None, max_ckpts_to_keep=5, train_dir=None, eval_dir='/tmp/tf_cnn_benchmarks/eval', backbone_model_path=None, trt_mode='', trt_max_workspace_size_bytes=4294967296, benchmark_log_dir=None, benchmark_test_id=None)
+Traceback (most recent call last):
+  File "../tf_cnn_benchmarks.py", line 75, in <module>
+    app.run(main)  # Raises error on invalid flags, unlike tf.app.run()
+  File "/gpfs/alpine/proj-shared/csc143/jwang/python-tf/lib/python3.6/site-packages/absl/app.py", line 300, in run
+    _run_main(main, args)
+  File "/gpfs/alpine/proj-shared/csc143/jwang/python-tf/lib/python3.6/site-packages/absl/app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "../tf_cnn_benchmarks.py", line 65, in main
+    bench = benchmark_cnn.BenchmarkCNN(params)
+  File "/gpfs/alpine/csc143/proj-shared/jwang/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py", line 1454, in __init__
+    params, create_config_proto(params))
+  File "/gpfs/alpine/csc143/proj-shared/jwang/benchmarks/scripts/tf_cnn_benchmarks/platforms/default/util.py", line 42, in get_cluster_manager
+    return cnn_util.GrpcClusterManager(params, config_proto)
+  File "/gpfs/alpine/csc143/proj-shared/jwang/benchmarks/scripts/tf_cnn_benchmarks/cnn_util.py", line 246, in __init__
+    protocol=params.server_protocol)
+  File "/gpfs/alpine/proj-shared/csc143/jwang/python-tf/lib/python3.6/site-packages/tensorflow/python/training/server_lib.py", line 148, in __init__
+    self._server = c_api.TF_NewServer(self._server_def.SerializeToString())
+tensorflow.python.framework.errors_impl.UnknownError: Could not start gRPC server
+2019-03-18 01:58:50.411747: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x147b515d0 executing computations on platform CUDA. Devices:
+2019-03-18 01:58:50.411789: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.411804: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.411819: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (2): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.411833: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (3): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.411844: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (4): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.411854: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (5): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.419933: W tensorflow/core/platform/profile_utils/cpu_utils.cc:98] Failed to find bogomips in /proc/cpuinfo; cannot determine CPU frequency
+2019-03-18 01:58:50.420366: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x147bffe60 executing computations on platform Host. Devices:
+2019-03-18 01:58:50.420390: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-03-18 01:58:50.420988: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0004:04:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.421406: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0004:05:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.421819: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 2 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0004:06:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.422238: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 3 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0035:03:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.422660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 4 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0035:04:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.423078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 5 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0035:05:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.423254: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1, 2, 3, 4, 5
+2019-03-18 01:58:50.654867: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x150a30f00 executing computations on platform CUDA. Devices:
+2019-03-18 01:58:50.654898: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.654908: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.654916: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (2): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.654924: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (3): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.654932: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (4): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.654940: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (5): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-03-18 01:58:50.662927: W tensorflow/core/platform/profile_utils/cpu_utils.cc:98] Failed to find bogomips in /proc/cpuinfo; cannot determine CPU frequency
+2019-03-18 01:58:50.663367: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x150adf790 executing computations on platform Host. Devices:
+2019-03-18 01:58:50.663390: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-03-18 01:58:50.664015: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0004:04:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.664448: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0004:05:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.664861: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 2 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0004:06:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.665279: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 3 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0035:03:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.665714: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 4 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0035:04:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.666146: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 5 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0035:05:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-18 01:58:50.666333: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1, 2, 3, 4, 5
+2019-03-18 01:58:52.506078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-18 01:58:52.506123: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 2 3 4 5 
+2019-03-18 01:58:52.506135: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N Y Y Y Y Y 
+2019-03-18 01:58:52.506145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   Y N Y Y Y Y 
+2019-03-18 01:58:52.506154: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 2:   Y Y N Y Y Y 
+2019-03-18 01:58:52.506168: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 3:   Y Y Y N Y Y 
+2019-03-18 01:58:52.506180: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 4:   Y Y Y Y N Y 
+2019-03-18 01:58:52.506194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 5:   Y Y Y Y Y N 
+2019-03-18 01:58:52.508807: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:1/device:GPU:0 with 14834 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0004:04:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.509497: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:1/device:GPU:1 with 14834 MB memory) -> physical GPU (device: 1, name: Tesla V100-SXM2-16GB, pci bus id: 0004:05:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.510178: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:1/device:GPU:2 with 14834 MB memory) -> physical GPU (device: 2, name: Tesla V100-SXM2-16GB, pci bus id: 0004:06:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.510873: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:1/device:GPU:3 with 14834 MB memory) -> physical GPU (device: 3, name: Tesla V100-SXM2-16GB, pci bus id: 0035:03:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.511592: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:1/device:GPU:4 with 14836 MB memory) -> physical GPU (device: 4, name: Tesla V100-SXM2-16GB, pci bus id: 0035:04:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.512293: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:1/device:GPU:5 with 14840 MB memory) -> physical GPU (device: 5, name: Tesla V100-SXM2-16GB, pci bus id: 0035:05:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.514599: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:252] Initialize GrpcChannelCache for job ps -> {0 -> a01n05:2221}
+2019-03-18 01:58:52.514617: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:252] Initialize GrpcChannelCache for job worker -> {0 -> a01n05:2222, 1 -> localhost:2222}
+2019-03-18 01:58:52.539961: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:391] Started server with target: grpc://localhost:2222
+W0318 01:58:52.553009 35184372399376 deprecation.py:323] From /gpfs/alpine/proj-shared/csc143/jwang/python-tf/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+W0318 01:58:52.581805 35184372399376 deprecation.py:323] From /gpfs/alpine/csc143/proj-shared/jwang/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:129: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv2d instead.
+W0318 01:58:52.640592 35184372399376 deprecation.py:323] From /gpfs/alpine/csc143/proj-shared/jwang/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:261: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.max_pooling2d instead.
+2019-03-18 01:58:52.788502: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-18 01:58:52.788547: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 2 3 4 5 
+2019-03-18 01:58:52.788559: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N Y Y Y Y Y 
+2019-03-18 01:58:52.788568: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   Y N Y Y Y Y 
+2019-03-18 01:58:52.788577: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 2:   Y Y N Y Y Y 
+2019-03-18 01:58:52.788586: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 3:   Y Y Y N Y Y 
+2019-03-18 01:58:52.788595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 4:   Y Y Y Y N Y 
+2019-03-18 01:58:52.788604: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 5:   Y Y Y Y Y N 
+2019-03-18 01:58:52.791194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:0/device:GPU:0 with 14834 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0004:04:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.791950: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:0/device:GPU:1 with 14834 MB memory) -> physical GPU (device: 1, name: Tesla V100-SXM2-16GB, pci bus id: 0004:05:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.792641: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:0/device:GPU:2 with 14834 MB memory) -> physical GPU (device: 2, name: Tesla V100-SXM2-16GB, pci bus id: 0004:06:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.793289: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:0/device:GPU:3 with 14834 MB memory) -> physical GPU (device: 3, name: Tesla V100-SXM2-16GB, pci bus id: 0035:03:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.794013: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:0/device:GPU:4 with 14834 MB memory) -> physical GPU (device: 4, name: Tesla V100-SXM2-16GB, pci bus id: 0035:04:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.794671: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:worker/replica:0/task:0/device:GPU:5 with 14840 MB memory) -> physical GPU (device: 5, name: Tesla V100-SXM2-16GB, pci bus id: 0035:05:00.0, compute capability: 7.0)
+2019-03-18 01:58:52.796865: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:252] Initialize GrpcChannelCache for job ps -> {0 -> a01n05:2221}
+2019-03-18 01:58:52.796882: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:252] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2222, 1 -> a01n06:2222}
+2019-03-18 01:58:52.821982: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:391] Started server with target: grpc://localhost:2222
+W0318 01:58:52.832837 35184372399376 deprecation.py:323] From /gpfs/alpine/proj-shared/csc143/jwang/python-tf/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+W0318 01:58:52.866773 35184372399376 deprecation.py:323] From /gpfs/alpine/csc143/proj-shared/jwang/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:129: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv2d instead.
+W0318 01:58:52.925629 35184372399376 deprecation.py:323] From /gpfs/alpine/csc143/proj-shared/jwang/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:261: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.max_pooling2d instead.
+W0318 01:58:55.827320 35184372399376 deprecation.py:323] From /gpfs/alpine/proj-shared/csc143/jwang/python-tf/lib/python3.6/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+W0318 01:58:55.919630 35184372399376 deprecation.py:323] From /gpfs/alpine/proj-shared/csc143/jwang/python-tf/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+W0318 01:58:56.111702 35184372399376 deprecation.py:323] From /gpfs/alpine/proj-shared/csc143/jwang/python-tf/lib/python3.6/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+W0318 01:58:56.203869 35184372399376 deprecation.py:323] From /gpfs/alpine/proj-shared/csc143/jwang/python-tf/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+W0318 01:59:24.131607 35184372399376 deprecation.py:323] From /gpfs/alpine/csc143/proj-shared/jwang/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2238: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0318 01:59:24.795947 35184372399376 deprecation.py:323] From /gpfs/alpine/csc143/proj-shared/jwang/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2238: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2019-03-18 01:59:39.776917: I tensorflow/core/distributed_runtime/master_session.cc:1192] Start master session 0f40847d4d85cb3b with config: intra_op_parallelism_threads: 1 inter_op_parallelism_threads: 164 gpu_options { experimental { } } allow_soft_placement: true graph_options { rewrite_options { pin_to_host_optimization: OFF } } experimental { collective_group_leader: "/job:worker/replica:0/task:0" }
+2019-03-18 01:59:40.450516: I tensorflow/core/distributed_runtime/master_session.cc:1192] Start master session 0acf6c38162de0cd with config: intra_op_parallelism_threads: 1 inter_op_parallelism_threads: 164 gpu_options { experimental { } } allow_soft_placement: true graph_options { rewrite_options { pin_to_host_optimization: OFF } } experimental { collective_group_leader: "/job:worker/replica:0/task:0" }
+I0318 01:59:41.201513 35184372399376 session_manager.py:491] Running local_init_op.
+I0318 01:59:43.301599 35184372399376 session_manager.py:491] Running local_init_op.
+I0318 01:59:56.571580 35184372399376 session_manager.py:493] Done running local_init_op.
+I0318 01:59:56.571696 35184372399376 session_manager.py:493] Done running local_init_op.
+2019-03-18 02:00:09.061178: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.9.2 locally
+2019-03-18 02:00:09.091289: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.9.2 locally
+Params(model='resnet50', eval=False, eval_interval_secs=0, eval_during_training_every_n_steps=None, eval_during_training_every_n_epochs=None, eval_during_training_at_specified_steps=[], eval_during_training_at_specified_epochs=[], forward_only=False, freeze_when_forward_only=False, print_training_accuracy=False, batch_size=0, eval_batch_size=0, batch_group_size=1, num_batches=None, num_eval_batches=None, num_epochs=None, num_eval_epochs=None, stop_at_top_1_accuracy=None, collect_eval_results_async=False, num_warmup_batches=None, autotune_threshold=None, num_gpus=6, gpu_indices='', display_every=10, display_perf_ewma=None, data_dir=None, data_name=None, resize_method='bilinear', distortions=True, use_datasets=True, input_preprocessor='default', gpu_thread_mode='gpu_private', per_gpu_thread_count=0, hierarchical_copy=False, network_topology=<NetworkTopology.DGX1: 'dgx1'>, gradient_repacking=0, compact_gradient_transfer=True, variable_consistency='strong', datasets_repeat_cached_sample=False, local_parameter_device='CPU', device='gpu', data_format='NCHW', num_intra_threads=None, num_inter_threads=0, use_numa_affinity=False, trace_file='', use_chrome_trace_format=True, tfprof_file=None, graph_file=None, partitioned_graph_file_prefix=None, optimizer='sgd', init_learning_rate=None, piecewise_learning_rate_schedule=None, num_epochs_per_decay=0.0, learning_rate_decay_factor=0.0, num_learning_rate_warmup_epochs=0.0, minimum_learning_rate=0.0, resnet_base_lr=None, momentum=0.9, rmsprop_decay=0.9, rmsprop_momentum=0.9, rmsprop_epsilon=1.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, gradient_clip=None, weight_decay=4e-05, gpu_memory_frac_for_testing=0.0, use_unified_memory=None, use_tf_layers=True, tf_random_seed=1234, debugger=None, use_python32_barrier=False, ml_perf=False, datasets_use_prefetch=True, datasets_prefetch_buffer_size=1, datasets_num_private_threads=None, datasets_use_caching=False, datasets_parallel_interleave_cycle_length=None, datasets_sloppy_parallel_interleave=False, datasets_parallel_interleave_prefetch=None, multi_device_iterator_max_buffer_size=1, winograd_nonfused=True, batchnorm_persistent=True, sync_on_finish=False, staged_vars=False, force_gpu_compatible=False, allow_growth=None, xla=False, xla_compile=False, fuse_decode_and_crop=True, distort_color_in_yiq=True, enable_optimizations=True, rewriter_config=None, loss_type_to_report='total_loss', single_l2_loss_op=False, use_resource_vars=False, compute_lr_on_cpu=False, sparse_to_dense_grads=False, mkl=False, kmp_blocktime=0, kmp_affinity='granularity=fine,verbose,compact,1,0', kmp_settings=1, use_fp16=False, fp16_loss_scale=None, fp16_vars=False, fp16_enable_auto_loss_scale=False, fp16_inc_loss_scale_every_n=1000, variable_update='distributed_replicated', all_reduce_spec=None, agg_small_grads_max_bytes=0, agg_small_grads_max_group=10, allreduce_merge_scope=1, job_name='worker', ps_hosts='a01n05:2221', worker_hosts='a01n05:2222,a01n06:2222', controller_host=None, task_index=1, server_protocol='grpc', cross_replica_sync=True, horovod_device='', summary_verbosity=0, save_summaries_steps=0, save_model_secs=0, save_model_steps=None, max_ckpts_to_keep=5, train_dir=None, eval_dir='/tmp/tf_cnn_benchmarks/eval', backbone_model_path=None, trt_mode='', trt_max_workspace_size_bytes=4294967296, benchmark_log_dir=None, benchmark_test_id=None)
+TensorFlow:  1.13
+Params(model='resnet50', eval=False, eval_interval_secs=0, eval_during_training_every_n_steps=None, eval_during_training_every_n_epochs=None, eval_during_training_at_specified_steps=[], eval_during_training_at_specified_epochs=[], forward_only=False, freeze_when_forward_only=False, print_training_accuracy=False, batch_size=0, eval_batch_size=0, batch_group_size=1, num_batches=None, num_eval_batches=None, num_epochs=None, num_eval_epochs=None, stop_at_top_1_accuracy=None, collect_eval_results_async=False, num_warmup_batches=None, autotune_threshold=None, num_gpus=6, gpu_indices='', display_every=10, display_perf_ewma=None, data_dir=None, data_name=None, resize_method='bilinear', distortions=True, use_datasets=True, input_preprocessor='default', gpu_thread_mode='gpu_private', per_gpu_thread_count=0, hierarchical_copy=False, network_topology=<NetworkTopology.DGX1: 'dgx1'>, gradient_repacking=0, compact_gradient_transfer=True, variable_consistency='strong', datasets_repeat_cached_sample=False, local_parameter_device='CPU', device='gpu', data_format='NCHW', num_intra_threads=None, num_inter_threads=0, use_numa_affinity=False, trace_file='', use_chrome_trace_format=True, tfprof_file=None, graph_file=None, partitioned_graph_file_prefix=None, optimizer='sgd', init_learning_rate=None, piecewise_learning_rate_schedule=None, num_epochs_per_decay=0.0, learning_rate_decay_factor=0.0, num_learning_rate_warmup_epochs=0.0, minimum_learning_rate=0.0, resnet_base_lr=None, momentum=0.9, rmsprop_decay=0.9, rmsprop_momentum=0.9, rmsprop_epsilon=1.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, gradient_clip=None, weight_decay=4e-05, gpu_memory_frac_for_testing=0.0, use_unified_memory=None, use_tf_layers=True, tf_random_seed=1234, debugger=None, use_python32_barrier=False, ml_perf=False, datasets_use_prefetch=True, datasets_prefetch_buffer_size=1, datasets_num_private_threads=None, datasets_use_caching=False, datasets_parallel_interleave_cycle_length=None, datasets_sloppy_parallel_interleave=False, datasets_parallel_interleave_prefetch=None, multi_device_iterator_max_buffer_size=1, winograd_nonfused=True, batchnorm_persistent=True, sync_on_finish=False, staged_vars=False, force_gpu_compatible=False, allow_growth=None, xla=False, xla_compile=False, fuse_decode_and_crop=True, distort_color_in_yiq=True, enable_optimizations=True, rewriter_config=None, loss_type_to_report='total_loss', single_l2_loss_op=False, use_resource_vars=False, compute_lr_on_cpu=False, sparse_to_dense_grads=False, mkl=False, kmp_blocktime=0, kmp_affinity='granularity=fine,verbose,compact,1,0', kmp_settings=1, use_fp16=False, fp16_loss_scale=None, fp16_vars=False, fp16_enable_auto_loss_scale=False, fp16_inc_loss_scale_every_n=1000, variable_update='distributed_replicated', all_reduce_spec=None, agg_small_grads_max_bytes=0, agg_small_grads_max_group=10, allreduce_merge_scope=1, job_name='worker', ps_hosts='a01n05:2221', worker_hosts='a01n05:2222,a01n06:2222', controller_host=None, task_index=0, server_protocol='grpc', cross_replica_sync=True, horovod_device='', summary_verbosity=0, save_summaries_steps=0, save_model_secs=0, save_model_steps=None, max_ckpts_to_keep=5, train_dir=None, eval_dir='/tmp/tf_cnn_benchmarks/eval', backbone_model_path=None, trt_mode='', trt_max_workspace_size_bytes=4294967296, benchmark_log_dir=None, benchmark_test_id=None)
+Model:       resnet50
+TensorFlow:  1.13
+Dataset:     imagenet (synthetic)
+Model:       resnet50
+Mode:        training
+Dataset:     imagenet (synthetic)
+SingleSess:  False
+Mode:        training
+Batch size:  768 global
+SingleSess:  False
+             64 per device
+Batch size:  768 global
+Num batches: 100
+             64 per device
+Num epochs:  0.06
+Num batches: 100
+Devices:     ['/job:worker/replica:0/task:1/gpu:0', '/job:worker/replica:0/task:1/gpu:1', '/job:worker/replica:0/task:1/gpu:2', '/job:worker/replica:0/task:1/gpu:3', '/job:worker/replica:0/task:1/gpu:4', '/job:worker/replica:0/task:1/gpu:5']
+Num epochs:  0.06
+NUMA bind:   False
+Devices:     ['/job:worker/replica:0/task:0/gpu:0', '/job:worker/replica:0/task:0/gpu:1', '/job:worker/replica:0/task:0/gpu:2', '/job:worker/replica:0/task:0/gpu:3', '/job:worker/replica:0/task:0/gpu:4', '/job:worker/replica:0/task:0/gpu:5']
+Data format: NCHW
+NUMA bind:   False
+Optimizer:   sgd
+Data format: NCHW
+Variables:   distributed_replicated
+Optimizer:   sgd
+Sync:        True
+Variables:   distributed_replicated
+==========
+Sync:        True
+Generating training model
+==========
+Initializing graph
+Generating training model
+Running warm up
+Initializing graph
+Done warm up
+Running warm up
+Step	Img/sec	total_loss
+Done warm up
+1	images/sec: 330.9 +/- 0.0 (jitter = 0.0)	7.916
+Step	Img/sec	total_loss
+10	images/sec: 339.9 +/1	images/sec: 330.8 +/- 0.0 (jitter = 0.0)	7.916
+- 6.0 (jitter = 20.1)	7.908
+10	images/sec: 339.9 +/20	images/sec: 334.2 +/- 6.7 (jitter = 21.5)	7.829
+- 6.0 (jitter = 20.1)	7.908
+30	images/sec: 326.9 +/- 6.9 (jitter = 21.4)	7.942
+20	images/sec: 334.2 +/- 6.7 (jitter = 21.5)	7.829
+40	images/sec: 322.5 +/- 6.7 (jitter = 23.7)	7.830
+30	images/sec: 326.9 +/- 6.9 (jitter = 21.4)	7.942
+50	images/sec: 323.1 +/- 5.9 (jitter = 22.6)	7.758
+40	images/sec: 322.5 +/- 6.7 (jitter = 23.8)	7.830
+60	images/sec: 319.8 +/- 5.8 (jitter = 22.9)	7.743
+50	images/sec: 323.1 +/- 5.9 (jitter = 22.6)	7.758
+70	images/sec: 323.0 +/- 5.1 (jitter = 22.8)	7.684
+60	images/sec: 319.8 +/- 5.8 (jitter = 23.0)	7.743
+80	images/sec: 319.8 +/- 4.8 (jitter = 24.9)	7.643
+70	images/sec: 323.0 +/- 5.1 (jitter = 23.0)	7.684
+90	images/sec: 321.9 +/- 4.4 (jitter = 23.1)	7.634
+80	images/sec: 319.8 +/- 4.8 (jitter = 24.9)	7.643
+100	images/sec: 320.1 +/- 4.4 (jitter = 23.4)	7.617
+90	images/sec: 321.9 +/- 4.4 (jitter = 23.2)	7.634
+----------------------------------------------------------------
+100	images/sec: 320.1 +/- 4.4 (jitter = 23.5)	7.617
+total images/sec: 640.09
+----------------------------------------------------------------
+----------------------------------------------------------------
+total images/sec: 640.09
+----------------------------------------------------------------
