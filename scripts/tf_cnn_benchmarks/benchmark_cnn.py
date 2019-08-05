@@ -950,7 +950,6 @@ def _get_checkpoint_to_load(ckpt_dir):
                                         format(ckpt_dir))
   return model_checkpoint_path
 
-
 # Params are passed to BenchmarkCNN's constructor. Params is a map from name
 # to value, with one field per key in flags.param_specs.
 #
@@ -2214,6 +2213,7 @@ class BenchmarkCNN(object):
     return stats
 
   @jw_decorator
+  # This function contains both warm-up and training.
   def benchmark_with_session(self, sess, supervisor, graph_info,
                              eval_graph_info, bcast_global_variables_op,
                              is_chief, summary_writer, profiler):

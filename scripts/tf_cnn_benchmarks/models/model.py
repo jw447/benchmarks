@@ -20,6 +20,7 @@ import tensorflow as tf
 
 import convnet_builder
 
+from util import jw_decorator
 # BuildNetworkResult encapsulate the result (e.g. logits) of a
 # Model.build_network() call.
 BuildNetworkResult = namedtuple(
@@ -33,6 +34,7 @@ BuildNetworkResult = namedtuple(
 class Model(object):
   """Base model config for DNN benchmarks."""
 
+  @jw_decorator
   def __init__(self,
                model_name,
                batch_size,

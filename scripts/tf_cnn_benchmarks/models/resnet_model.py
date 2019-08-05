@@ -37,7 +37,7 @@ from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow as tf
 import datasets
 from models import model as model_lib
-
+from util import jw_decorator
 
 def bottleneck_block_v1(cnn, depth, depth_bottleneck, stride):
   """Bottleneck block with identity short-cut for ResNet v1.
@@ -247,6 +247,7 @@ def residual_block(cnn, depth, stride, version, projection_shortcut=False):
 class ResnetModel(model_lib.CNNModel):
   """Resnet cnn network configuration."""
 
+  @jw_decorator
   def __init__(self, model, layer_counts, params=None):
     default_batch_sizes = {
         'resnet50': 64,
@@ -271,6 +272,7 @@ class ResnetModel(model_lib.CNNModel):
     else:
       self.version = 'v1'
 
+  @jw_decorator
   def add_inference(self, cnn):
     if self.layer_counts is None:
       raise ValueError('Layer counts not specified for %s' % self.get_model())
@@ -294,6 +296,7 @@ class ResnetModel(model_lib.CNNModel):
       cnn.top_layer = tf.nn.relu(cnn.top_layer)
     cnn.spatial_mean()
 
+  @jw_decorator
   def get_learning_rate(self, global_step, batch_size):
     rescaled_lr = self.get_scaled_base_learning_rate(batch_size)
     num_batches_per_epoch = (
@@ -308,6 +311,7 @@ class ResnetModel(model_lib.CNNModel):
             warmup_steps, tf.float32))
     return tf.cond(global_step < warmup_steps, lambda: warmup_lr, lambda: lr)
 
+  @jw_decorator
   def get_scaled_base_learning_rate(self, batch_size):
     """Calculates base learning rate for creating lr schedule.
 
@@ -327,31 +331,31 @@ class ResnetModel(model_lib.CNNModel):
     scaled_lr = base_lr * (batch_size / self.base_lr_batch_size)
     return scaled_lr
 
-
+@jw_decorator
 def create_resnet50_model(params):
   return ResnetModel('resnet50', (3, 4, 6, 3), params=params)
 
-
+@jw_decorator
 def create_resnet50_v1_5_model(params):
   return ResnetModel('resnet50_v1.5', (3, 4, 6, 3), params=params)
 
-
+@jw_decorator
 def create_resnet50_v2_model(params):
   return ResnetModel('resnet50_v2', (3, 4, 6, 3), params=params)
 
-
+@jw_decorator
 def create_resnet101_model(params):
   return ResnetModel('resnet101', (3, 4, 23, 3), params=params)
 
-
+@jw_decorator
 def create_resnet101_v2_model(params):
   return ResnetModel('resnet101_v2', (3, 4, 23, 3), params=params)
 
-
+@jw_decorator
 def create_resnet152_model(params):
   return ResnetModel('resnet152', (3, 8, 36, 3), params=params)
 
-
+@jw_decorator
 def create_resnet152_v2_model(params):
   return ResnetModel('resnet152_v2', (3, 8, 36, 3), params=params)
 
@@ -366,6 +370,7 @@ class ResnetCifar10Model(model_lib.CNNModel):
   https://arxiv.org/pdf/1603.05027.pdf.
   """
 
+  @jw_decorator
   def __init__(self, model, layer_counts, params=None):
     if 'v2' in model:
       self.version = 'v2'
@@ -374,6 +379,7 @@ class ResnetCifar10Model(model_lib.CNNModel):
     super(ResnetCifar10Model, self).__init__(
         model, 32, 128, 0.1, layer_counts, params=params)
 
+  @jw_decorator
   def add_inference(self, cnn):
     if self.layer_counts is None:
       raise ValueError('Layer counts not specified for %s' % self.get_model())
@@ -401,6 +407,7 @@ class ResnetCifar10Model(model_lib.CNNModel):
       cnn.top_layer = tf.nn.relu(cnn.top_layer)
     cnn.spatial_mean()
 
+  @jw_decorator
   def get_learning_rate(self, global_step, batch_size):
     num_batches_per_epoch = int(50000 / batch_size)
     boundaries = num_batches_per_epoch * np.array([82, 123, 300],
@@ -409,42 +416,42 @@ class ResnetCifar10Model(model_lib.CNNModel):
     values = [0.1, 0.01, 0.001, 0.0002]
     return tf.train.piecewise_constant(global_step, boundaries, values)
 
-
+@jw_decorator
 def create_resnet20_cifar_model(params):
   return ResnetCifar10Model('resnet20', (3, 3, 3), params=params)
 
-
+@jw_decorator
 def create_resnet20_v2_cifar_model(params):
   return ResnetCifar10Model('resnet20_v2', (3, 3, 3), params=params)
 
-
+@jw_decorator
 def create_resnet32_cifar_model(params):
   return ResnetCifar10Model('resnet32', (5, 5, 5), params=params)
 
-
+@jw_decorator
 def create_resnet32_v2_cifar_model(params):
   return ResnetCifar10Model('resnet32_v2', (5, 5, 5), params=params)
 
-
+@jw_decorator
 def create_resnet44_cifar_model(params):
   return ResnetCifar10Model('resnet44', (7, 7, 7), params=params)
 
-
+@jw_decorator
 def create_resnet44_v2_cifar_model(params):
   return ResnetCifar10Model('resnet44_v2', (7, 7, 7), params=params)
 
-
+@jw_decorator
 def create_resnet56_cifar_model(params):
   return ResnetCifar10Model('resnet56', (9, 9, 9), params=params)
 
-
+@jw_decorator
 def create_resnet56_v2_cifar_model(params):
   return ResnetCifar10Model('resnet56_v2', (9, 9, 9), params=params)
 
-
+@jw_decorator
 def create_resnet110_cifar_model(params):
   return ResnetCifar10Model('resnet110', (18, 18, 18), params=params)
 
-
+@jw_decorator
 def create_resnet110_v2_cifar_model(params):
   return ResnetCifar10Model('resnet110_v2', (18, 18, 18), params=params)

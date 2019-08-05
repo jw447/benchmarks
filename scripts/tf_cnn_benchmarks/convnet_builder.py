@@ -27,11 +27,12 @@ from tensorflow.python.layers import convolutional as conv_layers
 from tensorflow.python.layers import core as core_layers
 from tensorflow.python.layers import pooling as pooling_layers
 from tensorflow.python.training import moving_averages
-
+from util import jw_decorator
 
 class ConvNetBuilder(object):
   """Builder of cnn net."""
 
+  @jw_decorator
   def __init__(self,
                input_op,
                input_nchan,
@@ -55,6 +56,7 @@ class ConvNetBuilder(object):
     self.aux_top_layer = None
     self.aux_top_size = 0
 
+  @jw_decorator
   def get_custom_getter(self):
     """Returns a custom getter that this class's methods must be called under.
 
@@ -94,6 +96,7 @@ class ConvNetBuilder(object):
       return var
     return inner_custom_getter
 
+  @jw_decorator
   @contextlib.contextmanager
   def switch_to_aux_top_layer(self):
     """Context that construct cnn in the auxiliary arm."""
@@ -109,6 +112,7 @@ class ConvNetBuilder(object):
     self.top_layer = saved_top_layer
     self.top_size = saved_top_size
 
+  @jw_decorator
   def get_variable(self, name, shape, dtype, cast_dtype, *args, **kwargs):
     # TODO(reedwm): Currently variables and gradients are transferred to other
     # devices and machines as type `dtype`, not `cast_dtype`. In particular,
@@ -117,6 +121,7 @@ class ConvNetBuilder(object):
     var = tf.get_variable(name, shape, dtype, *args, **kwargs)
     return tf.cast(var, cast_dtype)
 
+  @jw_decorator
   def _conv2d_impl(self, input_layer, num_channels_in, filters, kernel_size,
                    strides, padding, kernel_initializer):
     if self.use_tf_layers:
@@ -140,6 +145,7 @@ class ConvNetBuilder(object):
       return tf.nn.conv2d(input_layer, weights, strides, padding,
                           data_format=self.data_format)
 
+  @jw_decorator
   def conv(self,
            num_out_channels,
            k_height,
@@ -225,6 +231,7 @@ class ConvNetBuilder(object):
       self.top_size = num_out_channels
       return conv1
 
+  @jw_decorator
   def _pool(self,
             pool_name,
             pool_function,
@@ -260,6 +267,7 @@ class ConvNetBuilder(object):
     self.top_layer = pool
     return pool
 
+  @jw_decorator
   def mpool(self,
             k_height,
             k_width,
@@ -272,6 +280,8 @@ class ConvNetBuilder(object):
     return self._pool('mpool', pooling_layers.max_pooling2d, k_height, k_width,
                       d_height, d_width, mode, input_layer, num_channels_in)
 
+
+  @jw_decorator
   def apool(self,
             k_height,
             k_width,
@@ -285,6 +295,7 @@ class ConvNetBuilder(object):
                       k_width, d_height, d_width, mode, input_layer,
                       num_channels_in)
 
+  @jw_decorator
   def reshape(self, shape, input_layer=None):
     if input_layer is None:
       input_layer = self.top_layer
@@ -292,6 +303,7 @@ class ConvNetBuilder(object):
     self.top_size = shape[-1]  # HACK This may not always work
     return self.top_layer
 
+  @jw_decorator
   def affine(self,
              num_out_channels,
              input_layer=None,
@@ -326,6 +338,7 @@ class ConvNetBuilder(object):
       self.top_size = num_out_channels
       return affine1
 
+  @jw_decorator
   def inception_module(self, name, cols, input_layer=None, in_size=None):
     if input_layer is None:
       input_layer = self.top_layer
@@ -364,6 +377,7 @@ class ConvNetBuilder(object):
       self.top_size = sum([sizes[-1] for sizes in col_layer_sizes])
       return self.top_layer
 
+  @jw_decorator
   def spatial_mean(self, keep_dims=False):
     name = 'spatial_mean' + str(self.counts['spatial_mean'])
     self.counts['spatial_mean'] += 1
@@ -372,6 +386,7 @@ class ConvNetBuilder(object):
         self.top_layer, axes, keepdims=keep_dims, name=name)
     return self.top_layer
 
+  @jw_decorator
   def dropout(self, keep_prob=0.5, input_layer=None):
     if input_layer is None:
       input_layer = self.top_layer
@@ -389,6 +404,7 @@ class ConvNetBuilder(object):
       self.top_layer = dropout
       return dropout
 
+  @jw_decorator
   def _batch_norm_without_layers(self, input_layer, decay, use_scale, epsilon):
     """Batch normalization on `input_layer` without tf.layers."""
     # We make this function as similar as possible to the
@@ -431,6 +447,7 @@ class ConvNetBuilder(object):
           data_format=self.data_format, is_training=False)
     return bn
 
+  @jw_decorator
   def batch_norm(self, input_layer=None, decay=0.999, scale=False,
                  epsilon=0.001):
     """Adds a Batch Normalization layer."""
@@ -459,6 +476,7 @@ class ConvNetBuilder(object):
     self.top_size = int(self.top_size)
     return bn
 
+  @jw_decorator
   def lrn(self, depth_radius, bias, alpha, beta):
     """Adds a local response normalization layer."""
     name = 'lrn' + str(self.counts['lrn'])
