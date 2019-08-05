@@ -119,9 +119,8 @@ class LibrispeechDataset(Dataset):
 
 class ImageDataset(Dataset):
   """Abstract class for image datasets."""
-
-
-  @jw_decorator@jw_decorator
+  
+  @jw_decorator
   def __init__(self,
                name,
                height,
