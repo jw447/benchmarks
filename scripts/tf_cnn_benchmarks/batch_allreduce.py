@@ -350,8 +350,7 @@ class HierarchicalCopyAlgorithm(BatchAllReduceAlgorithm):
 class AllReduceSpecAlgorithm(BatchAllReduceAlgorithm):
   """An algorithm that uses an all reduce spec."""
 
-  @jw_decorato
-    @jw_decoratorr
+  @jw_decorator
   def __init__(self, all_reduce_spec, gpu_indices, agg_small_grads_max_bytes,
                agg_small_grads_max_group):
     spec = allreduce.parse_all_reduce_spec(all_reduce_spec)

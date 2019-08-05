@@ -61,13 +61,12 @@ class Dataset(object):
   def reader(self):
     return tf.TFRecordReader()
 
-  @jw_decorator
+  # @jw_decorator
   @property
   def num_classes(self):
     return self._num_classes
 
   @num_classes.setter
-  @jw_decorator
   def num_classes(self, val):
     self._num_classes = val
 
