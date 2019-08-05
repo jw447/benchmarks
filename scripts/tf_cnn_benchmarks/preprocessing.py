@@ -35,8 +35,9 @@ from tensorflow.python.framework import function
 from tensorflow.python.layers import utils
 from tensorflow.python.ops import data_flow_ops
 from tensorflow.python.platform import gfile
+from util import jw_decorator
 
-
+@jw_decorator
 def parse_example_proto(example_serialized):
   """Parses an Example proto containing a training example of an image.
 
@@ -115,7 +116,7 @@ _RESIZE_METHOD_MAP = {
     'area': tf.image.ResizeMethod.AREA
 }
 
-
+@jw_decorator
 def get_image_resize_method(resize_method, batch_position=0):
   """Get tensorflow resize method.
 
@@ -157,7 +158,7 @@ def get_image_resize_method(resize_method, batch_position=0):
 
   return resize_method_0()
 
-
+@jw_decorator
 def decode_jpeg(image_buffer, scope=None):  # , dtype=tf.float32):
   """Decode a JPEG string into one 3-D float image Tensor.
 
@@ -182,14 +183,14 @@ def decode_jpeg(image_buffer, scope=None):  # , dtype=tf.float32):
 
     return image
 
-
+@jw_decorator
 def normalized_image(images):
   # Rescale from [0, 255] to [0, 2]
   images = tf.multiply(images, 1. / 127.5)
   # Rescale to [-1, 1]
   return tf.subtract(images, 1.0)
 
-
+@jw_decorator
 def eval_image(image,
                height,
                width,
@@ -269,7 +270,7 @@ def eval_image(image,
     image = distorted_image
   return image
 
-
+@jw_decorator
 def train_image(image_buffer,
                 height,
                 width,
@@ -381,7 +382,7 @@ def train_image(image_buffer,
           tf.expand_dims(distorted_image, 0))
     return distorted_image
 
-
+@jw_decorator
 def distort_color(image, batch_position=0, distort_color_in_yiq=False,
                   scope=None):
   """Distort the color of the image.
@@ -788,6 +789,7 @@ class RecordInputImagePreprocessor(BaseImagePreprocessor):
 
 class ImagenetPreprocessor(RecordInputImagePreprocessor):
 
+  @jw_decorator
   def preprocess(self, image_buffer, bbox, batch_position):
     # pylint: disable=g-import-not-at-top
     try:

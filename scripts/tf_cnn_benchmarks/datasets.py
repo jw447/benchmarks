@@ -30,6 +30,7 @@ import tensorflow as tf
 
 from tensorflow.python.platform import gfile
 import preprocessing
+from util import jw_decorator
 
 IMAGENET_NUM_TRAIN_IMAGES = 1281167
 IMAGENET_NUM_VAL_IMAGES = 50000
@@ -41,6 +42,7 @@ COCO_NUM_VAL_IMAGES = 4952
 class Dataset(object):
   """Abstract class for cnn benchmarks dataset."""
 
+  @jw_decorator
   def __init__(self,
                name,
                data_dir=None,
@@ -51,34 +53,43 @@ class Dataset(object):
     self._queue_runner_required = queue_runner_required
     self._num_classes = num_classes
 
+  @jw_decorator
   def tf_record_pattern(self, subset):
     return os.path.join(self.data_dir, '%s-*-of-*' % subset)
 
+  @jw_decorator
   def reader(self):
     return tf.TFRecordReader()
 
+  @jw_decorator
   @property
   def num_classes(self):
     return self._num_classes
 
+  @jw_decorator
   @num_classes.setter
   def num_classes(self, val):
     self._num_classes = val
 
+  @jw_decorator
   @abstractmethod
   def num_examples_per_epoch(self, subset):
     pass
 
+  @jw_decorator
   def __str__(self):
     return self.name
 
+  @jw_decorator
   def get_input_preprocessor(self, input_preprocessor='default'):
     assert not self.use_synthetic_gpu_inputs()
     return _SUPPORTED_INPUT_PREPROCESSORS[self.name][input_preprocessor]
 
+  @jw_decorator
   def queue_runner_required(self):
     return self._queue_runner_required
 
+  @jw_decorator
   def use_synthetic_gpu_inputs(self):
     return not self.data_dir
 
@@ -86,10 +97,12 @@ class Dataset(object):
 class LibrispeechDataset(Dataset):
   """Configuration for LibriSpeech dataset."""
 
+  @jw_decorator
   def __init__(self, data_dir=None):
     super(LibrispeechDataset, self).__init__(
         'librispeech', data_dir, num_classes=29)
 
+  @jw_decorator
   def tf_record_pattern(self, subset):
     if subset == 'train':
       return os.path.join(self.data_dir, 'train-clean-*.tfrecords')
@@ -98,6 +111,7 @@ class LibrispeechDataset(Dataset):
     else:
       return ''
 
+  @jw_decorator
   def num_examples_per_epoch(self, subset='train'):
     del subset
     return 2  # TODO(laigd): currently this is an arbitrary number.
@@ -106,6 +120,8 @@ class LibrispeechDataset(Dataset):
 class ImageDataset(Dataset):
   """Abstract class for image datasets."""
 
+
+  @jw_decorator@jw_decorator
   def __init__(self,
                name,
                height,
@@ -124,10 +140,12 @@ class ImageDataset(Dataset):
 class ImagenetDataset(ImageDataset):
   """Configuration for Imagenet dataset."""
 
+  @jw_decorator
   def __init__(self, data_dir=None):
     super(ImagenetDataset, self).__init__(
         'imagenet', 300, 300, data_dir=data_dir)
 
+  @jw_decorator
   def num_examples_per_epoch(self, subset='train'):
     if subset == 'train':
       return IMAGENET_NUM_TRAIN_IMAGES
@@ -143,6 +161,7 @@ class Cifar10Dataset(ImageDataset):
   It will mount all the input images to memory.
   """
 
+  @jw_decorator
   def __init__(self, data_dir=None):
     super(Cifar10Dataset, self).__init__(
         'cifar10',
@@ -152,6 +171,7 @@ class Cifar10Dataset(ImageDataset):
         queue_runner_required=True,
         num_classes=11)
 
+  @jw_decorator
   def read_data_files(self, subset='train'):
     """Reads from data file and returns images and labels in a numpy array."""
     assert self.data_dir, ('Cannot call `read_data_files` when using synthetic '
@@ -180,6 +200,7 @@ class Cifar10Dataset(ImageDataset):
         [each_input[b'labels'] for each_input in inputs])
     return all_images, all_labels
 
+  @jw_decorator
   def num_examples_per_epoch(self, subset='train'):
     if subset == 'train':
       return 50000
@@ -192,10 +213,12 @@ class Cifar10Dataset(ImageDataset):
 class COCODataset(ImageDataset):
   """COnfiguration for COCO dataset."""
 
+  @jw_decorator
   def __init__(self, data_dir=None, image_size=300):
     super(COCODataset, self).__init__(
         'coco', image_size, image_size, data_dir=data_dir, num_classes=81)
 
+  @jw_decorator
   def num_examples_per_epoch(self, subset='train'):
     if subset == 'train':
       return COCO_NUM_TRAIN_IMAGES
@@ -228,7 +251,7 @@ _SUPPORTED_INPUT_PREPROCESSORS = {
     },
 }
 
-
+@jw_decorator
 def create_dataset(data_dir, data_name):
   """Create a Dataset instance based on data_dir and data_name."""
   if not data_dir and not data_name:

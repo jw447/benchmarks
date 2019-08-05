@@ -42,8 +42,9 @@ from tensorflow.contrib.compiler import xla
 from tensorflow.python.ops import data_flow_ops
 import allreduce
 import constants
+from util import jw_decorator
 
-
+@jw_decorator
 def _all_reduce_using_copy(tensors_across_devices, use_mean):
   """Does an all-reduce of a list of tensors by copying to the current device.
 
@@ -64,7 +65,7 @@ def _all_reduce_using_copy(tensors_across_devices, use_mean):
 @six.add_metaclass(abc.ABCMeta)
 class BatchAllReduceAlgorithm(object):
   """Represents an algorithm for performing a batch all-reduce operation."""
-
+  @jw_decorator
   def batch_all_reduce(self,
                        all_device_tensors,
                        num_splits,
@@ -203,6 +204,7 @@ class BatchAllReduceAlgorithm(object):
 
     return all_device_unpacked_tensors, all_device_warmup_ops
 
+  @jw_decorator
   @abc.abstractmethod
   def _do_batch_all_reduce(self, all_device_tensors):
     """Performs a batch all-reduce.
@@ -223,10 +225,12 @@ class BatchAllReduceAlgorithm(object):
 class CopyToDeviceAlgorithm(BatchAllReduceAlgorithm):
   """An algorithm that copies tensors to be reduced to a specific device."""
 
+  @jw_decorator
   def __init__(self, devices_to_reduce_on, use_mean=False):
     self._devices = devices_to_reduce_on
     self._use_mean = use_mean
 
+  @jw_decorator
   def _do_batch_all_reduce(self, all_device_tensors):
     reduced_tensors = []
     for i, tensors_across_devices in enumerate(zip(*all_device_tensors)):
@@ -244,6 +248,7 @@ class HierarchicalCopyAlgorithm(BatchAllReduceAlgorithm):
   topology.
   """
 
+  @jw_decorator
   def __init__(self, network_topology):
     """Initializer for HierarchicalCopyAlgorithm.
 
@@ -252,6 +257,7 @@ class HierarchicalCopyAlgorithm(BatchAllReduceAlgorithm):
     """
     self._network_topology = network_topology
 
+  @jw_decorator
   def _do_batch_all_reduce(self, all_device_tensors):
     avail_devices = [device_tensors[0].device
                      for device_tensors in all_device_tensors]
@@ -306,6 +312,7 @@ class HierarchicalCopyAlgorithm(BatchAllReduceAlgorithm):
     reduced_tensors = list(zip(*reduced_tensors))
     return reduced_tensors
 
+  @jw_decorator
   def __get_main_devices(self, tensor_index, num_devices):
     """Returns the pair of main devices to use for initial reduction.
 
@@ -343,6 +350,8 @@ class HierarchicalCopyAlgorithm(BatchAllReduceAlgorithm):
 class AllReduceSpecAlgorithm(BatchAllReduceAlgorithm):
   """An algorithm that uses an all reduce spec."""
 
+  @jw_decorato
+    @jw_decoratorr
   def __init__(self, all_reduce_spec, gpu_indices, agg_small_grads_max_bytes,
                agg_small_grads_max_group):
     spec = allreduce.parse_all_reduce_spec(all_reduce_spec)
@@ -354,6 +363,7 @@ class AllReduceSpecAlgorithm(BatchAllReduceAlgorithm):
     self._agg_small_grads_max_bytes = agg_small_grads_max_bytes
     self._agg_small_grads_max_group = agg_small_grads_max_group
 
+  @jw_decorator
   def _do_batch_all_reduce(self, all_device_tensors):
     # TODO(reedwm): Merge allreduce.sum_gradients_all_reduce with the other
     # gradient aggregation code, since gradient aggregation is doing an all
@@ -374,7 +384,7 @@ class AllReduceSpecAlgorithm(BatchAllReduceAlgorithm):
         agg_small_grads_max_group=self._agg_small_grads_max_group)
     return [[t for t, _ in grad_vars] for grad_vars in aggregated_device_grads]
 
-
+@jw_decorator
 def algorithm_from_params(params):
   """Returns a BatchAllReduceAlgorithm from a Params tuple."""
   if params.all_reduce_spec:
@@ -394,7 +404,7 @@ def algorithm_from_params(params):
       devices_to_reduce_on = ['/cpu:0']
     return CopyToDeviceAlgorithm(devices_to_reduce_on)
 
-
+@jw_decorator
 def _apply_to_all_device_tensors(all_device_tensors, apply_func, colocate=True):
   """Applies a function to each tensor in `all_device_tensors`.
 
@@ -427,7 +437,7 @@ def _apply_to_all_device_tensors(all_device_tensors, apply_func, colocate=True):
     new_all_device_tensors.append(new_device_tensors)
   return new_all_device_tensors
 
-
+@jw_decorator
 def _defer_tensor(tensor):
   """Defers the retrieval of a tensor.
 
@@ -454,7 +464,7 @@ def _defer_tensor(tensor):
   (tensor,) = tensor_stage.get()
   return tensor, put_op, warmup_op
 
-
+@jw_decorator
 def defer_single_device_tensors(device_tensors):
   """Defer tensors (gradients in this case) from a single device.
 
@@ -480,7 +490,7 @@ def defer_single_device_tensors(device_tensors):
 
   return deferred_tensors, put_ops, warmup_ops
 
-
+@jw_decorator
 def _add_put_op_control_deps(all_device_tensors, num_splits, put_ops):
   """Add control dependencies from `put_ops` to `all_device_tensors`.
 
@@ -528,6 +538,7 @@ class _TensorPacker(object):
   need multiple _TensorPacker object, one for each device.
   """
 
+  @jw_decorator
   def __init__(self, num_splits, compact):
     """Initializes the _TensorPacker.
 
@@ -542,6 +553,7 @@ class _TensorPacker(object):
     self._compact = compact
     self._before_compact_dtypes = []
 
+  @jw_decorator
   def maybe_concat_tensors(self, device_tensors):
     """Concatenate tensors into a single tensor."""
     if not self._num_splits:
@@ -555,6 +567,7 @@ class _TensorPacker(object):
     concatenated_grad = tf.concat(flat_tensors, 0)
     return [concatenated_grad]
 
+  @jw_decorator
   def maybe_split_tensors(self, concatenated_tensor):
     """Split concatenated tensor into `num_splits` pieces."""
     if not self._num_splits:
@@ -572,6 +585,7 @@ class _TensorPacker(object):
     tensor_packs = tf.split(concatenated_tensor, split_sizes)
     return tensor_packs
 
+  @jw_decorator
   def undo_maybe_split_tensors(self, tensor_packs):
     """Undo maybe_split_tensors()."""
     if not self._num_splits:
@@ -579,6 +593,7 @@ class _TensorPacker(object):
 
     return [tf.concat(tensor_packs, 0)]
 
+  @jw_decorator
   def undo_maybe_concat_tensors(self, concatenated_tensor):
     """Undo maybe_concat_tensors()."""
     if not self._num_splits:
@@ -598,6 +613,7 @@ class _TensorPacker(object):
     ]
     return tensors_with_shapes
 
+  @jw_decorator
   def maybe_compact_tensors(self, device_tensors):
     """Cast tensors to fp16 and store their original types."""
     if not self._compact:
@@ -611,6 +627,7 @@ class _TensorPacker(object):
 
     return compact_tensors
 
+  @jw_decorator
   def undo_maybe_compact_tensors(self, compact_tensors):
     """Undo maybe_compact_tensors()."""
     if not self._compact:

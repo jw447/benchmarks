@@ -41,7 +41,7 @@ import benchmark_cnn
 import cnn_util
 import flags
 from cnn_util import log_fn
-
+from util import jw_decorator
 
 absl_flags.DEFINE_integer('iters_per_step', 5,
                           'Number of iterations to run all-reduce for, per '
@@ -57,7 +57,7 @@ flags.define_flags()
 for name in flags.param_specs.keys():
   absl_flags.declare_key_flag(name)
 
-
+@jw_decorator
 def get_var_shapes(model):
   """Returns the list of variable shapes for a tf_cnn_benchmarks Model."""
   with tf.Graph().as_default():
@@ -66,7 +66,7 @@ def get_var_shapes(model):
     model.build_network([images])
     return [[int(d) for d in v.shape.dims] for v in tf.trainable_variables()]
 
-
+@jw_decorator
 def all_reduce(all_device_tensors, variable_mgr):
   """Performs a single batch all-reduce.
 
@@ -86,7 +86,7 @@ def all_reduce(all_device_tensors, variable_mgr):
       [g for g, _ in agg_device_tensors]
       for agg_device_tensors in aggregated_tower_grads]
 
-
+@jw_decorator
 def build_all_reduce_iterations(all_device_tensors, tower_devices, variable_mgr,
                                 num_iters):
   """Builds the all-reduce ops for multiple iterations to aggregate tensors.
@@ -150,7 +150,7 @@ def build_all_reduce_iterations(all_device_tensors, tower_devices, variable_mgr,
         ops_to_run.append(var.assign(t))
   return tf.group(*ops_to_run)
 
-
+@jw_decorator
 def build_graph(tower_devices, tensor_shapes, variable_mgr, num_iters):
   """Builds the graph for the benchmark.
 
@@ -180,7 +180,7 @@ def build_graph(tower_devices, tensor_shapes, variable_mgr, num_iters):
   log_fn('Done building all-reduce ops')
   return benchmark_op
 
-
+@jw_decorator
 def run_graph(benchmark_op, bench_cnn, init_ops, dummy_loss_op):
   """Runs the graph for the benchmark.
 
@@ -227,7 +227,7 @@ def run_graph(benchmark_op, bench_cnn, init_ops, dummy_loss_op):
     log_fn('Average time per step: %s' %
            ((time.time() - start) / bench_cnn.num_batches))
 
-
+@jw_decorator
 def run_benchmark(bench_cnn, num_iters):
   """Runs the all-reduce benchmark.
 

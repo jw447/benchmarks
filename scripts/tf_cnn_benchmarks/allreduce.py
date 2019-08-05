@@ -26,10 +26,10 @@ from tensorflow.contrib.all_reduce.python import all_reduce
 from tensorflow.python.framework import device as pydev
 from tensorflow.python.framework import ops
 from tensorflow.python.ops import collective_ops
-
+from util import jw_decorator
 AllReduceSpecTuple = pycoll.namedtuple('AllReduceSpecTuple', 'alg shards limit')
 
-
+@jw_decorator
 def parse_general_int(s):
   """Parse integer with power-of-2 suffix eg. 32k."""
   mo = re.match(r'(\d+)([KkMGT]?)$', s)
@@ -52,7 +52,7 @@ def parse_general_int(s):
     v = int(s)
   return v
 
-
+@jw_decorator
 def parse_all_reduce_spec(all_reduce_spec):
   """Parse all_reduce_spec.
 
@@ -142,7 +142,7 @@ def parse_all_reduce_spec(all_reduce_spec):
                          (all_reduce_spec, alg))
   return spec
 
-
+@jw_decorator
 def build_all_reduce_device_prefixes(job_name, num_tasks):
   """Build list of device prefix names for all_reduce.
 
@@ -161,7 +161,7 @@ def build_all_reduce_device_prefixes(job_name, num_tasks):
     assert num_tasks == 1
     return ['/job:%s' % job_name]
 
-
+@jw_decorator
 def group_device_names(devices, group_size):
   """Group device names into groups of group_size.
 
@@ -189,7 +189,7 @@ def group_device_names(devices, group_size):
     groups[i % num_groups].append(devices[i % num_devices])
   return groups
 
-
+@jw_decorator
 def split_grads_by_size(threshold_size, device_grads):
   """Break gradients into two sets according to tensor size.
 
@@ -224,7 +224,7 @@ def split_grads_by_size(threshold_size, device_grads):
 
 _instance_key = 1
 
-
+@jw_decorator
 def new_collective_instance_key():
   """Returns a new instance key for use in defining a collective op."""
   global _instance_key
@@ -236,7 +236,7 @@ def new_collective_instance_key():
 _group_key = 1
 _group_key_table = dict()
 
-
+@jw_decorator
 def collective_group_key(devices):
   """Returns a group key for the set of devices.
 
@@ -258,7 +258,7 @@ def collective_group_key(devices):
   rv = _group_key_table[concat]
   return rv
 
-
+@jw_decorator
 def build_collective_reduce(input_tensors, num_workers, num_shards,
                             red_op='Add', un_op='Id'):
   """Build a subgraph that does one full all-reduce, using the collective Op.
@@ -306,17 +306,17 @@ def build_collective_reduce(input_tensors, num_workers, num_shards,
       out_tensors.append(reduce_op)
   return out_tensors
 
-
+@jw_decorator
 def broadcast_send(t, shape, dtype, group_size, group_key, instance_key):
   return collective_ops.broadcast_send(t, shape, dtype, group_size, group_key,
                                        instance_key)
 
-
+@jw_decorator
 def broadcast_recv(shape, dtype, group_size, group_key, instance_key):
   return collective_ops.broadcast_recv(shape, dtype, group_size, group_key,
                                        instance_key)
 
-
+@jw_decorator
 def sum_grad_and_var_all_reduce(single_session,
                                 grad_and_vars,
                                 num_workers,
@@ -367,7 +367,7 @@ def sum_grad_and_var_all_reduce(single_session,
     result.append([g, v])
   return result
 
-
+@jw_decorator
 def contains_any(haystack, needles):
   """Tests if any needle is a substring of haystack.
 
@@ -384,7 +384,7 @@ def contains_any(haystack, needles):
       return True
   return False
 
-
+@jw_decorator
 def sum_gradients_all_reduce(single_session,
                              dev_prefixes,
                              tower_grads,
@@ -460,7 +460,7 @@ def sum_gradients_all_reduce(single_session,
     new_tower_grads = unpack_small_tensors(new_tower_grads, packing)
   return new_tower_grads
 
-
+@jw_decorator
 def extract_ranges(index_list, range_size_limit=32):
   """Extract consecutive ranges and singles from index_list.
 
@@ -500,7 +500,7 @@ def extract_ranges(index_list, range_size_limit=32):
 
 GradPackTuple = pycoll.namedtuple('GradPackTuple', 'indices vars shapes')
 
-
+@jw_decorator
 def pack_range(key, packing, grad_vars, rng):
   """Form the concatenation of a specified range of gradient tensors.
 
@@ -532,7 +532,7 @@ def pack_range(key, packing, grad_vars, rng):
     with tf.device(members[0].device):
       return tf.concat(members, 0)
 
-
+@jw_decorator
 def unpack_grad_tuple(gv, gpt):
   """Unpack a previously packed collection of gradient tensors.
 
@@ -554,7 +554,7 @@ def unpack_grad_tuple(gv, gpt):
         unpacked_gv.append((tf.reshape(s, gpt.shapes[idx]), gpt.vars[idx]))
   return unpacked_gv
 
-
+@jw_decorator
 def pack_small_tensors(tower_grads, max_bytes=0, max_group=0):
   """Concatenate small gradient tensors together for reduction.
 
@@ -610,7 +610,7 @@ def pack_small_tensors(tower_grads, max_bytes=0, max_group=0):
   else:
     return tower_grads, None
 
-
+@jw_decorator
 def unpack_small_tensors(tower_grads, packing):
   """Undo the structure alterations to tower_grads done by pack_small_tensors.
 
