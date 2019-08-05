@@ -1793,7 +1793,7 @@ class BenchmarkCNN(object):
         return self._run_eval()
     else:
       return self._benchmark_train()
-  
+
   @jw_decorator
   def _run_eval(self):
     """Evaluate a model every self.params.eval_interval_secs.
@@ -1905,7 +1905,7 @@ class BenchmarkCNN(object):
           if image_producer is not None:
             image_producer.notify_image_consumption()
       return image_producer
-  
+
   @jw_decorator
   def _eval_once(self, sess, summary_writer, fetches, summary_op,
                  image_producer, global_step):
@@ -2426,7 +2426,7 @@ class BenchmarkCNN(object):
     if last_average_loss is not None:
       stats['last_average_loss'] = last_average_loss
     return stats
-  
+
   @jw_decorator
   def _should_eval_during_training(self, step):
     """Return True iff should run eval during training at current step."""
@@ -2439,7 +2439,7 @@ class BenchmarkCNN(object):
     # All other --eval_during_training_* flags are converted to step numbers
     # at which the model should run evaluation during training.
     return step in self.eval_during_training_at_specified_steps
-  
+
   @jw_decorator
   def _preprocess_graph(self, graph, graph_info):
     """Preprocess the graph before executing.
@@ -2525,7 +2525,7 @@ class BenchmarkCNN(object):
 
     # Creates a new graph as the default and import the converted graph back.
     updated_graph = tf.Graph()
-    
+
     @jw_decorator
     def _get_tensors_or_ops(inputs):
       """Gets the updated tensors or ops from 'updated_graph'."""
@@ -2562,7 +2562,7 @@ class BenchmarkCNN(object):
         global_step=updated_global_step,
         summary_op=None)
     return (updated_graph, updated_graph_info)
-  
+
   @jw_decorator
   def _build_input_processing(self, shift_ratio=0):
     """"Build the image (pre)processing portion of the model graph.
@@ -2641,7 +2641,7 @@ class BenchmarkCNN(object):
     return input_processing_info._replace(
         input_producer_op=input_producer_op,
         input_producer_stages=input_producer_stages)
-  
+
   @jw_decorator
   def _maybe_initialize_fp16(self):
     """Initialize fp16 settings."""
@@ -2770,7 +2770,7 @@ class BenchmarkCNN(object):
                                   enqueue_ops, update_ops, all_accuracy_ops,
                                   phase_train)
     return (input_producer_op, enqueue_ops, fetches)
- 
+
   @jw_decorator
   def _build_fetches(self, global_step, all_logits, losses, device_grads,
                      enqueue_ops, update_ops, all_accuracy_ops, phase_train):
@@ -3226,7 +3226,7 @@ class BenchmarkCNN(object):
           if forward_pass_and_grad_outputs else None)
 
       return logits, loss, grads
-    
+
     @jw_decorator
     def make_results(logits, loss, grads):
       """Generate results based on logits, loss and grads."""
@@ -3252,7 +3252,7 @@ class BenchmarkCNN(object):
       outputs = maybe_compile(forward_pass_and_gradients, self.params)
       logits, loss, grads = unpack_forward_pass_and_gradients_output(outputs)
       return make_results(logits, loss, grads)
-    
+
   @jw_decorator
   def get_input_preprocessor(self):
     """Returns the image preprocessor to used, based on the model.
@@ -3284,6 +3284,7 @@ class BenchmarkCNN(object):
         distort_color_in_yiq=self.params.distort_color_in_yiq,
         fuse_decode_and_crop=self.params.fuse_decode_and_crop)
 
+  @jw_decorator
   def add_sync_queues_and_barrier(self, name_prefix, enqueue_after_list):
     """Adds ops to enqueue on all worker queues.
 
@@ -3318,19 +3319,19 @@ class BenchmarkCNN(object):
 
       return tf.group(*queue_ops)
 
-
+@jw_decorator
 def _is_mkl_flag_absent(mkl_flag):
   return not (absl_flags.FLAGS.is_parsed() and mkl_flag in absl_flags.FLAGS
               and absl_flags.FLAGS[mkl_flag].present)
 
-
+@jw_decorator
 def _print_os_env_ignored_warning(mkl_flag, flag_default_val, os_env_var):
   tf.logging.warn(
       ('OS ENV variable %s=%s is ignored and script default: '
        '%s is used. Use --%s to override.') %
       (os_env_var, os.environ[os_env_var], flag_default_val, mkl_flag))
 
-
+@jw_decorator
 def _set_environ_vars(params):
   """Sets up the environment variables that BenchmarkCNN should use."""
   if params.batchnorm_persistent:
@@ -3402,7 +3403,7 @@ def _set_environ_vars(params):
       params = params._replace(datasets_num_private_threads=num_private_threads)
   return params
 
-
+@jw_decorator
 def setup(params):
   """Sets up the environment that BenchmarkCNN should run in.
 
@@ -3441,7 +3442,7 @@ def setup(params):
 
   return params
 
-
+@jw_decorator
 def maybe_compile(computation, params):
   if params and params.xla_compile:
     return xla.compile(computation)
