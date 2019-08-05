@@ -28,13 +28,13 @@ import benchmark_cnn
 import cnn_util
 import flags
 from cnn_util import log_fn
-
+from util import jw_decorator
 
 flags.define_flags()
 for name in flags.param_specs.keys():
   absl_flags.declare_key_flag(name)
 
-
+@jw_decorator
 def main(positional_arguments):
   # Command-line arguments like '--distortions False' are equivalent to
   # '--distortions=True False', where False is a positional argument. To prevent

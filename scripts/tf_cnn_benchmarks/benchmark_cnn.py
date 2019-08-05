@@ -639,7 +639,7 @@ class GlobalStepWatcher(threading.Thread):
   Polls for changes in the global_step of the model, and finishes when the
   number of steps for the global run are done.
   """
-
+  @jw_decorator
   def __init__(self, sess, global_step_op, start_at_global_step,
                end_at_global_step):
     threading.Thread.__init__(self)
@@ -653,6 +653,7 @@ class GlobalStepWatcher(threading.Thread):
     self.finish_time = 0
     self.finish_step = 0
 
+  @jw_decorator
   def run(self):
     while self.finish_time == 0:
       time.sleep(.25)
@@ -671,12 +672,15 @@ class GlobalStepWatcher(threading.Thread):
         self.finish_time = time.time()
         self.finish_step = global_step_val
 
+  @jw_decorator
   def done(self):
     return self.finish_time > 0
 
+  @jw_decorator
   def num_steps(self):
     return self.finish_step - self.start_step
 
+  @jw_decorator
   def elapsed_time(self):
     return self.finish_time - self.start_time
 
@@ -684,7 +688,7 @@ class GlobalStepWatcher(threading.Thread):
 class CheckpointNotFoundException(Exception):
   pass
 
-
+@jw_decorator
 def create_config_proto(params):
   """Returns session config proto.
 
@@ -750,7 +754,7 @@ def create_config_proto(params):
 
   return config
 
-
+@jw_decorator
 def get_mode_from_params(params):
   """Returns the mode in which this script is running.
 
@@ -779,7 +783,7 @@ def get_mode_from_params(params):
 # How many digits to show for the loss and accuracies during training.
 LOSS_AND_ACCURACY_DIGITS_TO_SHOW = 3
 
-
+@jw_decorator
 def benchmark_one_step(sess,
                        fetches,
                        step,
@@ -880,7 +884,7 @@ def benchmark_one_step(sess,
         tf.train.write_graph(graph_def, path, graph_filename, as_text)
   return (summary_str, lossval)
 
-
+@jw_decorator
 def get_perf_timing_str(speed_mean, speed_uncertainty, speed_jitter, scale=1):
   if scale == 1:
     # TODO(laigd): rename 'images' to maybe 'inputs', same below.
@@ -889,7 +893,7 @@ def get_perf_timing_str(speed_mean, speed_uncertainty, speed_jitter, scale=1):
   else:
     return 'images/sec: %.1f' % speed_mean
 
-
+@jw_decorator
 def get_perf_timing(batch_size, step_train_times, scale=1):
   times = np.array(step_train_times)
   speeds = batch_size / times
@@ -898,7 +902,7 @@ def get_perf_timing(batch_size, step_train_times, scale=1):
   speed_jitter = 1.4826 * np.median(np.abs(speeds - np.median(speeds)))
   return speed_mean, speed_uncertainty, speed_jitter
 
-
+@jw_decorator
 def load_checkpoint(saver, sess, ckpt_dir):
   """Loads checkpoint from provided directory or full path.
 
@@ -920,7 +924,7 @@ def load_checkpoint(saver, sess, ckpt_dir):
   log_fn('Successfully loaded model from %s.' % model_checkpoint_path)
   return global_step
 
-
+@jw_decorator
 def _get_checkpoint_to_load(ckpt_dir):
   """Returns which checkpoint to load.
 
@@ -955,7 +959,7 @@ def _get_checkpoint_to_load(ckpt_dir):
 # Params directly.
 Params = namedtuple('Params', flags.param_specs.keys())  # pylint: disable=invalid-name
 
-
+@jw_decorator
 def validate_params(params):
   """Validates that the Params tuple had valid values.
 
@@ -986,7 +990,7 @@ def validate_params(params):
       raise ValueError('Param %s of value %s is not in %s'%
                        (name, value, param_spec.kwargs['enum_values']))
 
-
+@jw_decorator
 def make_params(**kwargs):
   """Create a Params tuple for BenchmarkCNN from kwargs.
 
@@ -1006,7 +1010,7 @@ def make_params(**kwargs):
   validate_params(params)
   return params
 
-
+@jw_decorator
 def make_params_from_flags():
   """Create a Params tuple for BenchmarkCNN from absl_flags.FLAGS.
 
@@ -1019,7 +1023,7 @@ def make_params_from_flags():
                  for name in flags.param_specs.keys()}
   return Params(**flag_values)
 
-
+@jw_decorator
 def remove_param_fields(params, fields_to_remove):
   """Remove fields from a Params namedtuple."""
   params_dict = params._asdict()
@@ -1030,7 +1034,7 @@ def remove_param_fields(params, fields_to_remove):
   new_params_type = namedtuple('Params', params_dict.keys())
   return new_params_type(**params_dict)
 
-
+@jw_decorator
 def get_num_batches_and_epochs(params, batch_size, num_examples_per_epoch):
   """Returns the number of batches and epochs to run for.
 
@@ -1060,7 +1064,7 @@ def get_num_batches_and_epochs(params, batch_size, num_examples_per_epoch):
   num_epochs = num_batches * batch_size / float(num_examples_per_epoch)
   return (num_batches, num_epochs)
 
-
+@jw_decorator
 def get_piecewise_learning_rate(piecewise_learning_rate_schedule,
                                 global_step, num_batches_per_epoch):
   """Returns a piecewise learning rate tensor.
@@ -1097,7 +1101,7 @@ def get_piecewise_learning_rate(piecewise_learning_rate_schedule,
   return tf.train.piecewise_constant(global_step, boundaries, values,
                                      name='piecewise_learning_rate')
 
-
+@jw_decorator
 def get_learning_rate(params, global_step, num_examples_per_epoch, model,
                       batch_size):
   """Returns a learning rate tensor based on global_step.
@@ -1165,7 +1169,7 @@ def get_learning_rate(params, global_step, num_examples_per_epoch, model,
 
   return learning_rate
 
-
+@jw_decorator
 def get_optimizer(params, learning_rate):
   """Returns the optimizer that should be used based on params."""
   if params.optimizer == 'momentum':
@@ -1187,7 +1191,7 @@ def get_optimizer(params, learning_rate):
                      params.optimizer)
   return opt
 
-
+@jw_decorator
 def generate_tfprof_profile(profiler, tfprof_file):
   """Generates a tfprof profile, writing it to a file and printing top ops.
 
@@ -1213,7 +1217,7 @@ def generate_tfprof_profile(profiler, tfprof_file):
 
 class BenchmarkCNN(object):
   """Class for benchmarking a cnn network."""
-
+  @jw_decorator
   def __init__(self, params, dataset=None, model=None):
     """Initialize BenchmarkCNN.
 
@@ -1596,6 +1600,7 @@ class BenchmarkCNN(object):
       # equivalent, like num_batches and num_eval_batches.
       self.params = remove_param_fields(self.params, {'eval'})
 
+  @jw_decorator
   @contextlib.contextmanager
   def _do_eval(self):
     """Context manager to switches BenchmarkCNN to eval mode.
@@ -1623,6 +1628,7 @@ class BenchmarkCNN(object):
       self.num_batches = old_num_batches
       self.num_epochs = old_num_epochs
 
+  @jw_decorator
   def _config_benchmark_logger(self):
     """Config the model garden benchmark logger."""
     model_benchmark_logger = None
@@ -1641,6 +1647,7 @@ class BenchmarkCNN(object):
 
   # TODO(laigd): this changes the global device list which is used everywhere,
   # consider refactoring it.
+  @jw_decorator
   def reset_devices_for_task(self, task_num, is_local=False):
     """Used to imitate another task when building a distributed graph."""
     worker_prefix = ('/job:localhost' if is_local else
@@ -1652,6 +1659,7 @@ class BenchmarkCNN(object):
     ]
     self.devices = self.variable_mgr.get_devices()
 
+  @jw_decorator
   def raw_devices_across_tasks(self, is_local=False):
     """Returns list of raw device names across all tasks."""
     if is_local:
@@ -1664,6 +1672,7 @@ class BenchmarkCNN(object):
           for i in xrange(self.num_gpus)
       ]
 
+  @jw_decorator
   def print_info(self):
     """Print basic information."""
     benchmark_info = self._get_params_info()
@@ -1697,6 +1706,7 @@ class BenchmarkCNN(object):
       log_fn('Horovod on:  %s' % self.params.horovod_device)
     log_fn('==========')
 
+  @jw_decorator
   def _get_params_info(self):
     """Get the common parameters info for the benchmark run.
 
@@ -1719,6 +1729,7 @@ class BenchmarkCNN(object):
         'single_session': single_session,
         'device_list': device_list,}
 
+  @jw_decorator
   def _log_benchmark_run(self):
     """Log the benchmark info to the logger.
 
@@ -1751,6 +1762,7 @@ class BenchmarkCNN(object):
           self.model.get_model_name(), benchmark_info['dataset_name'],
           run_param, test_id=self.params.benchmark_test_id)
 
+  @jw_decorator
   def run(self):
     """Run the benchmark task assigned to this process.
 
@@ -1781,7 +1793,8 @@ class BenchmarkCNN(object):
         return self._run_eval()
     else:
       return self._benchmark_train()
-
+  
+  @jw_decorator
   def _run_eval(self):
     """Evaluate a model every self.params.eval_interval_secs.
 
@@ -1821,6 +1834,7 @@ class BenchmarkCNN(object):
         time.sleep(self.params.eval_interval_secs)
     return {}
 
+  @jw_decorator
   def _build_eval_graph(self, scope_name=None):
     """Build the evaluation graph.
 
@@ -1856,6 +1870,7 @@ class BenchmarkCNN(object):
 
   # TODO(reedwm): For consistency, we should have a similar
   # "_initialize_train_graph" function. They can likely be the same function.
+  @jw_decorator
   def _initialize_eval_graph(self, enqueue_ops, input_producer_op,
                              local_var_init_op_group, sess):
     """Initializes the evaluation graph.
@@ -1890,7 +1905,8 @@ class BenchmarkCNN(object):
           if image_producer is not None:
             image_producer.notify_image_consumption()
       return image_producer
-
+  
+  @jw_decorator
   def _eval_once(self, sess, summary_writer, fetches, summary_op,
                  image_producer, global_step):
     """Evaluate the model using the validation dataset."""
@@ -1954,6 +1970,7 @@ class BenchmarkCNN(object):
         self.benchmark_logger.log_evaluation_result(eval_result)
       return accuracy_at_1, accuracy_at_5
 
+  @jw_decorator
   def _benchmark_train(self):
     """Run cnn in benchmark mode. Skip the backward pass if forward_only is on.
 
@@ -1976,6 +1993,7 @@ class BenchmarkCNN(object):
 
   GPU_CACHED_INPUT_VARIABLE_NAME = 'gpu_cached_inputs'
 
+  @jw_decorator
   def _unfreezable_local_variables(self, graph):
     """Get the local variables that we don't want to freeze."""
     return graph.get_collection(
@@ -1984,6 +2002,7 @@ class BenchmarkCNN(object):
         # constant folded with ops which process the input.
         scope='.*' + BenchmarkCNN.GPU_CACHED_INPUT_VARIABLE_NAME)
 
+  @jw_decorator
   def _build_graph(self):
     """Build the graph.
 
@@ -2053,6 +2072,7 @@ class BenchmarkCNN(object):
         local_var_init_op_group=local_var_init_op_group,
         summary_op=summary_op)
 
+  @jw_decorator
   def _benchmark_graph(self, graph_info, eval_graph_info):
     """Benchmark the training graph.
 
@@ -2193,6 +2213,7 @@ class BenchmarkCNN(object):
       generate_tfprof_profile(profiler, self.params.tfprof_file)
     return stats
 
+  @jw_decorator
   def benchmark_with_session(self, sess, supervisor, graph_info,
                              eval_graph_info, bcast_global_variables_op,
                              is_chief, summary_writer, profiler):
@@ -2405,7 +2426,8 @@ class BenchmarkCNN(object):
     if last_average_loss is not None:
       stats['last_average_loss'] = last_average_loss
     return stats
-
+  
+  @jw_decorator
   def _should_eval_during_training(self, step):
     """Return True iff should run eval during training at current step."""
 
@@ -2417,7 +2439,8 @@ class BenchmarkCNN(object):
     # All other --eval_during_training_* flags are converted to step numbers
     # at which the model should run evaluation during training.
     return step in self.eval_during_training_at_specified_steps
-
+  
+  @jw_decorator
   def _preprocess_graph(self, graph, graph_info):
     """Preprocess the graph before executing.
 
@@ -2502,7 +2525,8 @@ class BenchmarkCNN(object):
 
     # Creates a new graph as the default and import the converted graph back.
     updated_graph = tf.Graph()
-
+    
+    @jw_decorator
     def _get_tensors_or_ops(inputs):
       """Gets the updated tensors or ops from 'updated_graph'."""
 
@@ -2538,7 +2562,8 @@ class BenchmarkCNN(object):
         global_step=updated_global_step,
         summary_op=None)
     return (updated_graph, updated_graph_info)
-
+  
+  @jw_decorator
   def _build_input_processing(self, shift_ratio=0):
     """"Build the image (pre)processing portion of the model graph.
 
@@ -2616,7 +2641,8 @@ class BenchmarkCNN(object):
     return input_processing_info._replace(
         input_producer_op=input_producer_op,
         input_producer_stages=input_producer_stages)
-
+  
+  @jw_decorator
   def _maybe_initialize_fp16(self):
     """Initialize fp16 settings."""
     if self.params.use_fp16 and not self._doing_eval:
@@ -2634,6 +2660,7 @@ class BenchmarkCNN(object):
         self.loss_scale_normal_steps = tf.get_variable(
             name='loss_scale_normal_steps', initializer=0, trainable=False)
 
+  @jw_decorator
   def _build_model(self):
     """Build the TensorFlow graph."""
     if self.datasets_use_prefetch:
@@ -2743,7 +2770,8 @@ class BenchmarkCNN(object):
                                   enqueue_ops, update_ops, all_accuracy_ops,
                                   phase_train)
     return (input_producer_op, enqueue_ops, fetches)
-
+ 
+  @jw_decorator
   def _build_fetches(self, global_step, all_logits, losses, device_grads,
                      enqueue_ops, update_ops, all_accuracy_ops, phase_train):
     """Complete construction of model graph, populating the fetches map."""
@@ -2845,6 +2873,7 @@ class BenchmarkCNN(object):
     fetches['average_loss'] = average_loss
     return fetches
 
+  @jw_decorator
   def gradient_histogram_summary(self, avg_grads):
     """Create histogram of log values of all non-zero gradients."""
     with tf.name_scope('log_gradients_summary'):
@@ -2858,6 +2887,7 @@ class BenchmarkCNN(object):
           tf.log(tf.gather(grads, indices_for_non_zero_grads)), [-1])
       tf.summary.histogram('log_gradients', log_grads)
 
+  @jw_decorator
   def _build_model_single_session(self):
     """Build the TensorFlow graph for multiple replicas in a single_session.
 
@@ -2968,6 +2998,7 @@ class BenchmarkCNN(object):
       global_input_producer_op = None
     return (global_input_producer_op, enqueue_ops, fetches)
 
+  @jw_decorator
   def add_forward_pass_and_gradients(self,
                                      phase_train,
                                      rel_device_num,
@@ -3029,6 +3060,7 @@ class BenchmarkCNN(object):
     labels_device_placement_hack = (
         self.dataset.use_synthetic_gpu_inputs() and self.params.xla_compile)
 
+    @jw_decorator
     def device_aware_reshape(tensor, shape):
       device = self.devices[rel_device_num]
       # Labels are int32, place reshapes on gpu:0 (no device placement) when the
@@ -3045,6 +3077,7 @@ class BenchmarkCNN(object):
         for i in range(len(input_list))
     ]
 
+    @jw_decorator
     def forward_pass_and_gradients():
       """Builds forward pass and gradient computation network.
 
@@ -3164,6 +3197,7 @@ class BenchmarkCNN(object):
       else:
         return [loss] + grads
 
+    @jw_decorator
     def unpack_forward_pass_and_gradients_output(forward_pass_and_grad_outputs):
       """Unpacks outputs from forward_pass_and_gradients.
 
@@ -3192,7 +3226,8 @@ class BenchmarkCNN(object):
           if forward_pass_and_grad_outputs else None)
 
       return logits, loss, grads
-
+    
+    @jw_decorator
     def make_results(logits, loss, grads):
       """Generate results based on logits, loss and grads."""
       results = {}  # The return value
@@ -3217,7 +3252,8 @@ class BenchmarkCNN(object):
       outputs = maybe_compile(forward_pass_and_gradients, self.params)
       logits, loss, grads = unpack_forward_pass_and_gradients_output(outputs)
       return make_results(logits, loss, grads)
-
+    
+  @jw_decorator
   def get_input_preprocessor(self):
     """Returns the image preprocessor to used, based on the model.
 
