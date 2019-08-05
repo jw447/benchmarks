@@ -66,8 +66,8 @@ class Dataset(object):
   def num_classes(self):
     return self._num_classes
 
-  @jw_decorator
   @num_classes.setter
+  @jw_decorator
   def num_classes(self, val):
     self._num_classes = val
 
@@ -119,7 +119,7 @@ class LibrispeechDataset(Dataset):
 
 class ImageDataset(Dataset):
   """Abstract class for image datasets."""
-  
+
   @jw_decorator
   def __init__(self,
                name,
