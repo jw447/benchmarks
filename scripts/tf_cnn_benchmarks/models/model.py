@@ -151,7 +151,8 @@ class CNNModel(Model):
     super(CNNModel, self).__init__(
         model, batch_size, learning_rate, fp16_loss_scale,
         params=params)
-    self.image_size = image_size
+    #self.image_size = image_size
+    self.image_size = 3072
     self.layer_counts = layer_counts
     self.depth = 3
     self.params = params

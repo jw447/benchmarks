@@ -2581,6 +2581,7 @@ class BenchmarkCNN(object):
 
     # If using synthetic gpu inputs, do nothing on the cpu side.
     if self.dataset.use_synthetic_gpu_inputs():
+      print(self.datasets_use_prefetch)
       assert not self.datasets_use_prefetch
       return input_processing_info
 
