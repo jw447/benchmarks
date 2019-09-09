@@ -274,7 +274,7 @@ flags.DEFINE_boolean('use_chrome_trace_format', True,
                      'Chrome trace format. If False, then it will be a '
                      'StepStats raw proto.')
 _NUM_STEPS_TO_PROFILE = 10
-_NUM_OPS_TO_PRINT = 20
+_NUM_OPS_TO_PRINT = 30
 flags.DEFINE_string('tfprof_file', None,
                     'If specified, write a tfprof ProfileProto to this file. '
                     'The performance and other aspects of the model can then '
