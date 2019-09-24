@@ -65,7 +65,10 @@ class ImagenetResnetModel(model_lib.CNNModel):
     except ImportError:
       tf.logging.fatal('Please include tensorflow/models to the PYTHONPATH.')
       raise
-    images = tf.cast(images, data_type)
+    # jwang
+    # images = tf.cast(images, data_type)
+    # images = tf.to_float(images)
+    tf.print(images)
     model_class = ImagenetModel(resnet_size=self.resnet_size,
                                 resnet_version=self.version,
                                 # The official model dtype seems to be ignored,
